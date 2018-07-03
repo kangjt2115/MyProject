@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+	 	body{
+	 		background: #fff;
+	 	}
+		#header{
+			height:11rem;
+			background: url('../image/wan.jpeg') no-repeat left center;
+			background-size: 100% 100%;
+			overflow: hidden;
+			
+		}
+		.img1{
+			margin-left: 1rem;
+			width: 1rem;
+			height: 1rem;
+		}
+		.title{
+			text-align:center;
+		}
+		.title1{
+			font-size: 1rem;
+			color: #fff;
+		}
+		.title2{
+			font-size: 0.8rem;
+			color: #fff;
+		}
+		
+		#mid{
+			height: 0.5rem;
+			background: #f2f2f2;
+		}
+		.mid1{
+			
+			width: 100%;
+
+		}
+		.mid1 .linebottom{
+			height: 2.2rem;
+			width: 100%;
+			border-bottom: 1px solid #f2f2f2;
+			padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+			overflow: hidden;
+		}
+		.linetop{
+			border-top: 1px solid #f2f2f2;
+		}
+		#word{
+			display: block;
+			float:left;
+			font-size: 0.8rem;
+			color: #212121;
+		}
+		#title3{
+			font-size: 0.8rem;
+			margin-left: 0.6rem;
+			color:#212121;
+			margin-top:0.5rem;
+		}
+		#title4{
+			font-size: 0.7rem;
+			margin:0 1rem;
+			padding:0.5rem 0 1rem 0;
+		}
+		#img2 img{
+			width: 1.2rem;
+			height: 1.2rem;
+			
+		}
+		#img2{
+			width: 1.2rem;
+			height: 1.2rem;
+			float: right;
+			
+		}
+		#img20{
+			width: 1.2rem;
+			height: 1.2rem;
+			float: right;
+			margin-top: 0.8rem;
+		}
+		#word1{
+			display: block;
+			float: right;
+			font-size: 0.7rem;
+			margin-top: 0.2rem;
+		}
+		#word10{
+			display: block;
+			float: right;
+			font-size: 0.7rem;
+			margin-top: 1rem;
+		}
+		.mid1 .jia{
+			height: 4rem;
+			border-bottom: 1px solid #f2f2f2;
+			padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+			overflow: hidden;
+			width: 100%;
+		}
+		#img3 img{
+			width: 1.2rem;
+			height: 1.2rem;
+
+		}
+		#img3{
+			float: left;
+			margin-top: 1rem;
+		}
+		#img4 img{
+			width: 2.5rem;
+			height:2.5rem;
+			float: left;
+			border-radius:1.5rem;
+			margin-left: 0.5rem;
+
+		}
+		.aui-row .a_img{
+			padding: 0.75rem 0;
+		}
+		.a_img img{
+			width: 2rem;
+			height:2rem;
+			margin: 0 auto;
+			/*图片居中的话必须有宽度，然后让图片margin:0 auto 居中*/
+		}
+		#imgbottom img{
+			width: 0.9rem;
+			height: 0.9rem;
+			float: right;
+			margin-right:0.5rem;
+			margin-top: 0.1rem;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div id="header">
+    		<img class="img1" onclick="backToChat()" src="../image/jiantou.png">
+	<div class="title"><p class="title1">四级交流研讨群</p><p class="title2">(我加入的群)</p></div>
+</div>
+</header>
+	<section class="aui-grid">
+	    <div class="aui-row">
+	        <div class="aui-col-xs-3 a_img" onclick="toGongGao()">
+	        	<img src="../image/gonggao.png">
+	           	<div class="aui-grid-label">公告</div>
+	        </div>
+	        <div class="aui-col-xs-3 a_img">
+	            <img src="../image/wenjian.png" onclick="toWenJian()">
+	            <div class="aui-grid-label">文件</div>
+	        </div>
+	        <div class="aui-col-xs-3 a_img">
+	            <img src="../image/xiangce.png" onclick="toXiangCe()">
+	            <div class="aui-grid-label">相册</div>
+	        </div>
+	        <div class="aui-col-xs-3 a_img" onclick="toGengDuo()">
+	            <img src="../image/gengduo.png">
+	            <div class="aui-grid-label">更多</div>
+	        </div>
+	    </div>
+	</section>
+	<div id="mid"></div>
+	<section class="mid1">
+		<div class="linetop linebottom" onclick="openchanggroupname()">
+			<p id="word">我的群名片</p>
+			<div id="img2">
+				<img src="../image/jian.png">
+			</div>
+			<p id="word1">社会主义新帅比小康</p>
+			
+		</div>
+		<div class="jia" onclick="toChengyuan()">
+			<div id="img3">
+				<img src="../image/qunzu.png">
+			</div>
+			<div id="img4">
+				<img src="../image/siji.jpg">
+				<img src="../image/cc.gif">
+				<img src="../image/baiimg4.jpg">
+			</div>
+			<div id="img20">
+				<img src="../image/jian.png">
+			</div>
+			<p id="word10">497名成员</p>
+		</div>
+		<div class="linebottom" onclick="openmine()">
+			<p id="word">群主资料</p>
+			<div id="img2">
+				<img src="../image/jian.png">
+			</div>
+		</div>
+		
+		<div class="linebottom" onclick="fnlogin()">
+			<p id="word">聊天记录</p>
+			<div id="img2">
+				<img src="../image/jian.png">
+			</div>
+		</div>
+		<div class="bot">
+			<p id="title3">群介绍</p>
+			<p id="title4">本群用于交流四级方面的问题，分享过四级的经验，希望大家互相鼓励，好好学习，争取全过！</p>
+		</div>
+	</section>
+	
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+    	var header=$api.byId('header');
+		$api.fixStatusBar(header);
+
+    };
+    function backToChat(){
+    api.closeWin({
+    });
+    }
+    function openmine(){
+    api.openWin({
+	    name: 'Mine_Login_ziliao_header.html',
+	    url: 'Mine_Login_ziliao_header.html'
+    });
+    }
+     function openchanggroupname(){
+    api.openWin({
+	    name: 'yl_changgroupname.html',
+	    url: 'yl_changgroupname.html'
+    });
+    }
+    function fnlogin(){
+    	api.openWin({
+	        name: 'bai-xiaoxijilu-header',
+	        url: 'bai-xiaoxijilu-header.html'
+        });
+    }
+    function toGongGao(){
+    	api.openWin({
+    	    name: 'Message-GroupAnnouncement',
+    	    url: './Message-GroupAnnouncement.html',
+    	});
+    }
+    function toWenJian(){
+    	api.openWin({
+    	    name: 'Message-GroupFile',
+    	    url: './Message-GroupFile.html',
+    	});
+    }
+    function toXiangCe(){
+    	api.openWin({
+    	    name: 'Message-GroupPhotoAlbum',
+    	    url: './Message-GroupPhotoAlbum.html',
+    	});
+    }
+    function toGengDuo(){
+    	api.openWin({
+    	    name: 'Message-GroupMore',
+    	    url: './Message-GroupMore.html',
+    	});
+    }
+    function toChengyuan(){
+    	api.openWin({
+    	    name: 'Message-GroupMember',
+    	    url: './Message-GroupMember.html',
+    	});
+    }
+</script>
+</html>

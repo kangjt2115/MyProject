@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>底部导航</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+
+    <style>
+    #header{
+    position:fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    }
+       	.flex-con{
+       		font-size: 0.5rem;
+       	}
+        #footer{  background-color: #f2f2f2; height: 2.28rem;}
+        #footer ul li{  padding-top: 27px; padding-bottom: 4px; background: url() no-repeat center 2px; background-size: auto 23px; text-align: center; }
+        #footer ul li.active{ color: #6ab494; }
+        #footer ul li:nth-child(1){ background-image: url(../image/baishouyezhaomu1.png); margin-top: 0.2rem;}
+        #footer ul li:nth-child(2){ background-image: url(../image/baishouyeriqi1.png); margin-top: 0.2rem; }
+        #footer ul li:nth-child(3){ background-image: url(../image/baishouyexiaoxi1.png); margin-top: 0.2rem; }
+        #footer ul li:nth-child(4){ background-image: url(../image/baishouyewo1.png); margin-top: 0.2rem; }
+        #footer ul li:nth-child(1).active{ background-image: url(../image/baishouyezhaomu.png); color: #00ccff; margin-top: 0.2rem;}
+        #footer ul li:nth-child(2).active{ background-image: url(../image/baishouyeriqi.png); color: #00ccff;  margin-top: 0.2rem;}
+        #footer ul li:nth-child(3).active{ background-image: url(../image/baishouyexiaoxi.png);  color: #00ccff; margin-top: 0.2rem;}
+        #footer ul li:nth-child(4).active{ background-image: url(../image/baishouyewo.png);  color: #00ccff;margin-top: 0.2rem;} 
+        .flex-con{
+        	/*overflow: auto;*/
+        }
+    </style>
+</head>
+<body>
+<header id="header" style="background: #00ccff">
+        <div class="aui-bar aui-bar-nav" style="background: #00ccff">消息</div>
+	<div class="aui-tab" id="tab">
+	    <div class="aui-tab-item aui-active" tapmode="aui-active" onclick="MenuIndex(0)">群消息</div>
+	    <div class="aui-tab-item" tapmode="aui-active" onclick="MenuIndex(1)"><div></div>系统消息</div>
+	    <div class="aui-tab-item" tapmode="aui-active" onclick="MenuIndex(2)">与我有关</div>
+	</div>
+    </header>
+<div id="wrap" class="flex-wrap flex-vertical">
+    
+    <div class="flex-con"></div>
+    <div id="footer" class="border-t" style="background: white; border-top: 1px solid #f2f2f2;">
+        <ul class="flex-wrap" >
+            <li tapmode="hover" onclick="randomSwitchBtn( this,0 );" class="flex-con active" >榜单</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this,1 );" class="flex-con" >日程</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this,2 );" class="flex-con" >消息</li>
+            <li tapmode="hover" onclick="randomSwitchBtn( this,3);" class="flex-con" >我的</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function () {
+        header = $api.byId('header');;
+        var footer = $api.byId('footer');
+        $api.fixStatusBar(header);
+        headerH = $api.offset(header).h;
+        footerH = $api.offset(footer).h;
+         menus=$api.domAll(tab, '.aui-tab-item');
+          header.style.display = 'none';
+        api.setStatusBarStyle({
+            style: 'dark',
+        });
+      
+      api.openFrame({
+	     name:'Active_header.html',
+            	url:'./Active_header.html',
+            	
+                    bounces:false, 
+	      rect: {
+		      x: 0,
+                y: 0,
+                w: 'auto',
+                h: 'auto',
+                marginBottom:footerH
+	      }
+	      
+      }); 
+      
+      api.openFrameGroup({
+	      name: 'indexFrameGroup',
+	       rect: {
+                x: 0,
+                y: headerH,
+                w: 'auto',
+                h:api.winHeight-footerH-headerH,
+            },
+             index: 0,
+            frames:[
+                {
+                    name:'Message-GroupMessage',
+                url:'./Message-GroupMessage.html',
+                    pageParam:{}, 
+                    bounces:true, 
+                    opaque:true,
+                    bgColor: '#f5f5f5'
+                },{
+                    name:'Message-SystemMessage',
+                url:'./Message-SystemMessage.html',
+                    pageParam:{}, 
+                    bounces:true, 
+                    opaque:true,
+                    bgColor: '#f5f5f5'
+                },{
+                    name:'Message-RelatedToMe',
+                url:'./Message-RelatedToMe.html',
+                    pageParam:{}, 
+                    bounces:true, 
+                    opaque:true,
+                    bgColor: '#f5f5f5'
+                }
+            ]
+      },function(ret,err){
+      var name = ret.name;
+            var index = ret.index;
+      	MenuIndex(index);
+      });
+       api.setFrameGroupAttr({
+                name: 'indexFrameGroup',
+                hidden: true
+            });
+            
+   }
+
+ var header;
+    var headerH;
+    var footerH;
+    
+    
+      
+         
+
+    // 随意切换按钮
+    function randomSwitchBtn( tag,index_ ) {
+    
+    
+    var aIndex = [{
+    name:'Active_header.html',
+            	url:'./Active_header.html',
+            isgroup: true
+        }, {
+            name:'schedule_time',
+            	url:'./schedule_time.html',
+            isgroup: true
+        }, {
+            
+            isgroup: false
+        }, {
+           name:'Mine_Unlogin',
+            	url:'./Mine_Unlogin.html',
+            isgroup: true,
+            
+        }
+    ];
+    fnSetNavMenuIndex(index_);
+    
+    
+    for (var i = 0; i < aIndex.length; i++) {
+        var obj = aIndex[i];
+		//当前被点击的
+        if (i === index_) {
+			api.setFrameGroupAttr({
+                name: 'indexFrameGroup',
+                hidden: obj.isgroup
+            });
+		if (obj.url) {
+                api.openFrame({
+                    name: obj.name,
+                    url: obj.url,
+                    bounces: false,
+                    bgColor: '#f5f5f5',
+                    rect: {
+                        x: 0,
+                        y: 0,
+                        w: 'auto',
+                        h: 'auto',
+                        marginBottom: footerH
+                    }
+                });
+			}
+		
+			} else {
+            //其他项
+			if (obj.name) {
+                api.setFrameAttr({
+                    name: obj.name,
+                    hidden: true
+                });
+            	}
+			}
+		}
+        if( tag == $api.dom('#footer li.active') )return;
+        var eFootLis = $api.domAll('#footer li'),
+           
+            index = 0;
+        for (var i = 0,len = eFootLis.length; i < len; i++) {
+            if( tag == eFootLis[i] ){
+                index = i;
+                
+            }else{
+                $api.removeCls(eFootLis[i], 'active');
+            
+            }
+            
+        }
+        $api.addCls( eFootLis[index], 'active');
+      
+    }
+     var menus;
+      function MenuSelected(index_){
+        for(var i=0;i<menus.length;i++){
+            if (index_==i) {
+                $api.addCls(menus[i], 'aui-active');
+            }else{
+                $api.removeCls(menus[i], 'aui-active');
+            }
+        }
+    } 
+    function MenuIndex(index_){
+        MenuSelected(index_);
+        api.setFrameGroupIndex({
+            name:'indexFrameGroup',
+            index:index_,
+            scroll:true
+        });
+    }
+     function fnSetNavMenuIndex(index_) {
+//      fnSetNavMenuSelected(index_);
+        if (index_ == 2) {
+            header.style.display = 'block';
+        } else{
+            header.style.display = 'none';
+        }
+    }
+</script>

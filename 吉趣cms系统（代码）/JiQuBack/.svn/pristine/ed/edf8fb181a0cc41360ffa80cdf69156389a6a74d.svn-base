@@ -1,0 +1,205 @@
+<style type="text/css">
+  	.KJT-mt-20{
+    	margin-top: 20px;
+  	}
+  	.KJT-mt-10{
+    	margin-top: 10px;
+  	}
+  	.KJT_gi{
+        width:275px; height:220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .classTable{
+    	overflow: hidden;
+    }
+	.classTable>li{
+		float: left;
+		width: 25%;
+		height: 260px;
+		text-align: center;
+	}
+	.head{
+		font-size: 22px;
+		font-weight: bold;
+		color: #337ab7;
+		padding: 5px 0;
+		background-color: rgb(244,244,244);
+		text-align: center;
+	}
+	.grade{
+		margin-bottom: 50px;
+	}
+	.certainClass>div>svg>text>tspan{
+		font-family: "微软雅黑";
+	}
+	.signcheckBtn{
+		margin-top: -10px;
+		font-size: 15px;
+		color: #444;
+	}
+</style>
+<div class="row">
+  <div class="container-fluid" >
+    <ol class="breadcrumb">
+      	<li><a href="#signCheck">签到查看</a></li>
+	 	<li><a class="toPeople">查看签到结果</a></li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="container-fluid" >
+    <div class="btn-group KJT-blank" role="group">
+        <a class="toPeople"><button type="button" class="btn btn-default KJTbtn5">逐条查看</button></a>
+	  	<a class="toClass"><button type="button" class="btn btn-primary KJTbtn6">按班查看</button></a>
+    </div>
+  </div>
+</div>
+
+<div class="row KJT-mt-20">
+  	<div class="container-fluid all_Class">
+    	<!-- <div class="grade">
+    		<div class="head">2014级</div>
+	        <ul class="classTable KJT-mt-10">
+	        	<li class="certainClass">
+	        		<div id="g1"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g2"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g3"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g4"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g5"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        </ul>
+        </div>
+    	<div class="grade">
+	        <div class="head">2015级</div>
+	        <ul class="classTable KJT-mt-10">
+	        	<li class="certainClass">
+	        		<div id="g6"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g7"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g8"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g9"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        	<li class="certainClass">
+	        		<div id="g10"></div>
+	        		<button type="button" class="btn btn-default signcheckBtn">3人未签到</button>
+	        	</li>
+	        </ul>
+        </div> -->
+    </div>
+</div>
+<div class="row">
+  <div class="container-fluid">
+    <ul class="pagination" id="ZCC-pager">
+
+      </ul>
+  </div>
+</div>
+<script src="assets/js/DashBoard/raphael-2.1.4.min.js"></script>
+<script src="assets/js/DashBoard/justgage.js"></script>
+<script src="components/signCheck/checkclass.js"></script>
+<script>
+  	new KJT.component.signCheck_checkclass({
+		$all_Class:$(".all_Class"),
+		$toClass:$(".toClass"),
+		$toPeople:$(".toPeople"),
+	});
+	// var g1,g2,g3,g4,g5;
+ //  var sss = function(){
+ //    var g1 = new JustGage({
+ //      id: "g1",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "1班",
+ //    });
+ //    var g2 = new JustGage({
+ //      id: "g2",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "2班",
+ //    });
+ //    var g3 = new JustGage({
+ //      id: "g3",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "3班",
+ //    });
+ //    var g4 = new JustGage({
+ //      id: "g4",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "4班",
+ //    });
+ //    var g5 = new JustGage({
+ //      id: "g5",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "5班",
+ //    });
+ //    var g6 = new JustGage({
+ //      id: "g6",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //    });
+ //    var g7 = new JustGage({
+ //      id: "g7",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "Big Fella",
+ //    });
+ //    var g8 = new JustGage({
+ //      id: "g8",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "Big Fella",
+ //    });
+ //    var g9 = new JustGage({
+ //      id: "g9",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "Big Fella",
+ //    });
+ //    var g10 = new JustGage({
+ //      id: "g10",
+ //      value: getRandomInt(0, 30),
+ //      min: 0,
+ //      max: 30,
+ //      title: "Big Fella",
+ //    });
+ //    setInterval(function() {
+ //      g1.refresh(getRandomInt(0, 30));
+ //    }, 2500);
+ //  };
+ //  sss();
+</script>

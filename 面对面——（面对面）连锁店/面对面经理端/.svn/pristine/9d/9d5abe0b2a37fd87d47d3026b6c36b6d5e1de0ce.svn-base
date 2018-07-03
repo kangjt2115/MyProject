@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+    <div class="tag"></div>
+    <div class="list_frame" onclick="lizhi()">
+      <span class="">离职申请</span>
+      <div class="aui-badge"  style="position:relative;top:0; right:0">8</div>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="tag"></div>
+    <div class="list_frame" onclick="kaohe()">
+      <span class="">培训考核申请</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="tag"></div>
+    <div class="list_frame" onclick="chuqin()">
+      <span class="">出勤信息</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+
+    };
+		function lizhi(){
+			api.openWin({
+            name: 'leave_list_header',
+            url: './leave_list_header.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+		};
+		function kaohe(){
+			api.openWin({
+            name: 'examine_list_header',
+            url: './examine_list_header.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+		};
+		function chuqin(){
+			api.openWin({
+            name: 'duty_list_header',
+            url: './duty_list_header.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+		};
+</script>
+</html>

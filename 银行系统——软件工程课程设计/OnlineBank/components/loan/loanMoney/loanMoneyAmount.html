@@ -1,0 +1,78 @@
+<style type="text/css">
+	form {
+    width: 680px;
+    overflow: hidden;
+    }
+    .input_div{
+    	width: 350px;
+    	float: left;
+    }
+    .info{
+    	width: 350px;
+    	height: 20px;
+    	margin-top: 5px;
+    	padding-left: 5px;
+    	color: red;
+    	font-size: 14px;
+    }
+    button {
+    width: 70px;
+    height: 32px;
+    margin-top: 1px;
+    background: rgba(6, 127, 228, 0.71);
+    border-radius: 6px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    float: right;
+    }
+	#Button{
+		background: #46a3ff;
+	}
+	a{
+		cursor: pointer;
+	}
+	#KJT_select{
+		float: left;
+		margin-left: 17px;
+		height: 32px;
+		border-radius: 5px;
+		padding-left: 9px;
+	}
+</style>
+<div class="row">
+	<div class="container-fluid" >
+		<ol class="breadcrumb">
+		  <li>选择账户</li>
+		  <li id="kjt_bread">贷款</li>
+		</ol>
+	</div>
+</div>
+<div class="row">
+	<div class="container-fluid" >
+		<form class="form-signin" name="myForm" id="loginForm">
+			<div class="input_div">
+				<input type="text" name="username" class="username form-control" placeholder="请输入贷款金额" autofocus autocomplete="off"/>
+			</div>
+			<select id="KJT_select">
+			    <option value="一次性利随本清法"> 一次性利随本清法 </option>
+			    <option value="分期付息一次还本法"> 分期付息一次还本法 </option>
+			    <option value="等额本息法"> 等额本息法 </option>
+			    <option value="等额本金法"> 等额本金法 </option>
+			</select>
+			<button type="button" id="Button">确 定</button>
+		</form>
+		<div class="info"></div>
+	</div>
+</div>
+<script src="components/loan/loanMoney/loanMoneyAmount.js"></script>
+<script type="text/javascript">
+	new KJT.component.loanMoneyAmount({
+		$NameInput:$(".username"),
+		$Button:$("#Button"),
+		$kjt_breadcrumb:$("#kjt_bread"),
+		$info:$(".info"),
+	});
+</script>

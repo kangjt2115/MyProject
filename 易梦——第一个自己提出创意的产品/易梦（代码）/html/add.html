@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+   <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-pull-refresh.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <style>
+    	body{
+    		background: #f5f5f5;
+    	}
+
+        .add_wall{
+            background: #f5f5f5;
+            padding: 0.5rem;
+        }
+        .add_in1{
+            height: 2.5rem;
+            background: #ffffff;
+            border: 1px solid #f2f2f2;
+            border-radius: 0.55rem;
+            padding: 0.7rem 1rem;
+            color: #666666;
+            margin-bottom: 0.3rem;
+        }
+       .add_in2{
+        height: 2.5rem;
+            background: #ffffff;
+            border: 1px solid #f2f2f2;
+            border-radius: 0.55rem;
+            padding: 0.7rem 1rem;
+            color: #666666;
+            float: left;
+            width: 70%;
+            
+       }
+       .add_in3{
+            height: 2.5rem;
+            background: #ffffff;
+            border: 1px solid #f2f2f2;
+            border-radius: 0.55rem;
+            padding: 0.0rem 0.7rem;
+            color: #666666;
+            float: right;
+            position: relative;
+            width: 28%;
+       }
+       .bai-xia4{
+         margin-bottom: 0.3rem;
+            background-color:white;
+            border: 1px solid #f2f2f2;
+            border-radius: 0.55rem;
+           
+            width: 100%;
+            height: 3.0rem;
+        }
+        .bai-xia4-zuo{
+            height: 100%;
+            width: 100%;
+            float:left;
+        }
+        .bai-xia4-you{
+            height: 100%;
+            width: 25%;
+            float:left;
+            border-left: 1px solid #CCCCCC;
+        }
+        .bai-xia4-you img{
+            height: 1.6rem;
+            width: 1.6rem;
+            margin: 0.5rem auto;
+        }
+        .bai-xia4-zuo1{
+            height: 100%;
+            width: 33.33%;
+            float:left;
+        }
+        .bai-xia4-zuo1 img{
+            height: 1.25rem;
+            width: 1.25rem;
+            margin:5% auto;
+            margin-bottom:0;
+        }
+        .bai-xia4-zuo1 span{
+            width:1.5rem;
+            height:0.8rem;
+            font-size: 0.65rem;
+            color: #CCCCCC;
+            margin-left:39%;
+            text-align: center;
+        }
+        .add_in4{
+            border: 1px solid #f2f2f2;
+            border-radius: 0.55rem;
+            padding: 0.7rem 1rem;
+            color: #666666;
+            margin-bottom: 0.3rem;
+            background:#FFFFFF;
+        }
+        #text{
+        margin:0.1rem;
+        height:4.5rem;
+        color:#A1A1A1;
+        font-size:0.6rem;
+        padding: 0.3rem;
+        }
+        #sub{
+        float: right;
+        width: 100%;
+        height:1.9rem;
+        background: #00CCFF;
+        color: #FFFFFF;
+        margin-bottom:2rem;
+         border-radius:0.3rem;
+        }
+    </style>
+</head>
+<body>
+	<form class="add_wall"> 
+        <div class="add_in1">
+            <span style="float: left;">标题：</span>
+            <input type="text" name="" placeholder="添加想要发布招募的标题" style=" margin-top:0.15rem;height: 100% ;float: left; width: 9rem ;color: #999999; font-size: 0.7rem;">
+            <img src="../image/addimage.png" style="height: 100%;float: right;" onclick="api.openWin({
+	            name: 'add_paizhao',
+	            url: 'add_paizhao.html'
+            });">
+        </div>
+        <div style="width: 100% ;height:2.5rem; margin-bottom: 0.3rem;">
+        <div class="add_in2">
+            <span style="float: left;">人数：</span>
+            <input type="text" name=""  placeholder="请输入人数" style=" margin-top:0.15rem;height: 100% ;float: left; width: 59% ;color: #999999; font-size: 0.7rem;">
+            <img src="../image/addmebal.png" style="height: 100%;float: right;">
+        </div>
+        <div class="add_in3">
+            <img src="../image/addclock.png" style="height: 1.5rem;margin: 0 auto">
+            <p style=" font-size: 0.2rem;text-align: center;">设置时间</p>
+        </div>
+        </div>
+        <div class="bai-xia4">
+            <div class="bai-xia4-zuo">
+                <div class="bai-xia4-zuo1">
+                    <img src="../image/baifirst.png"/>
+                    <span>3张</span>
+                </div>
+                <div class="bai-xia4-zuo1">
+                    <img src="../image/baisecond.png"/>
+                    <span>25张</span>
+                </div>
+                <div class="bai-xia4-zuo1">
+                    <img src="../image/baithrid.png"/>
+                    <span>14张</span>
+                </div>
+            </div>
+        </div>
+        <div class="add_in1">
+            <span style="float: left;">地点：</span>
+            <input type="text" name="" placeholder="输入活动地点" style=" margin-top:0.15rem;height: 100% ;float: left; width: 9rem ;color: #999999; font-size: 0.7rem;">
+            <img src="../image/s_fujin.png" style="height: 100%;float: right;">
+        </div>
+        <div class="add_in4">
+            <span style="display: block;margin-bottom: 0.1rem;">联系方式</span>
+            <span style="display: block; margin-bottom: 0.1rem;">
+            <div style="float: left; width: 3.5rem">手机号</div> 
+            <input type="text" name="" placeholder="输入负责人手机号" style="margin-top:0.15rem;display: inline; height: 100% ; width: 9rem ;color: #999999; font-size: 0.7rem;"></span>
+            <span style="display: block;margin-bottom: 0.1rem;"><div style="float: left; width: 3.5rem">微信</div>  
+            <input type="text" name="" placeholder="输入负责人微信号" style="margin-top:0.15rem;display: inline; height: 100% ; width: 9rem ;color: #999999; font-size: 0.7rem;"></span>
+             <span style="display: block;margin-bottom: 0.1rem;"><div style="float: left; width: 3.5rem">邮箱</div>  
+            <input type="text" name="" placeholder="输入负责人邮箱号" style="margin-top:0.15rem;display: inline; height: 100% ; width: 9rem ;color: #999999; font-size: 0.7rem;"></span>
+             <span style="display: block;margin-bottom: 0.1rem;"><div style="float: left; width: 3.5rem">QQ</div>  
+            <input type="text" name="" placeholder="输入负责人QQ号" style="margin-top:0.15rem;display: inline; height: 100% ; width: 9rem ;color: #999999; font-size: 0.7rem;"></span>
+        </div>
+
+         <div class="add_in4">
+            <span style="display: block;margin-bottom: 0.1rem;">简介：</span>
+            <textarea rows="10" cols="10" id="text">说点什么吧..</textarea>
+            <img src="../image/addphoto.png" onclick="api.openWin({
+	            name: 'add_paizhao',
+	            url: 'add_paizhao.html'
+            });">
+        </div>
+        <input type="submit" value="发布" id="sub">
+    </form>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+</script>
+</html>

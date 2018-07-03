@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f2f2f2;
+}
+
+.headercol {
+    background-color: #fefefe;
+}
+
+.titlecol {
+    color: black;
+    font-weight: bold;
+}
+
+#left {
+    color: black;
+}
+
+.jiange {
+    height: 0.75rem;
+}
+
+.list_frame{
+  padding:0rem 0.75rem;
+  height: 2.5rem;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.list_frame span{
+  line-height: 2.5rem;
+}
+.list_ok{
+  float: right;
+  color:#FDA340;
+}
+.list_no{
+  float: right;
+  color:#989898;
+}
+.list_bottom{
+  margin-bottom: 4rem;
+}
+.submit{
+  height: 2.5rem;
+  background: white;
+}
+.submit span{
+  color:#FDA340;
+  width: 100%;
+  text-align: center;
+  line-height: 2.5rem;
+}

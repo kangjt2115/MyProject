@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>mine</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mine.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+</head>
+<body>
+	<div class="MyInf">
+		<div class="Inf_active_box">
+			<div class="head_Img">
+				<img class="Img" src="../image/head_img.jpg" />
+			</div>
+			<div class="Inf">
+				<span class="Name">白雪峰</span>
+				<span class="ID">工牌号:<span>CA984</span></span>
+				<span class="Tel">联系方式:<span>18516047795</span></span>
+			</div>
+			<div class="right_icon">
+				<i class="iconfont">&#xe65f;</i>
+			</div>
+		</div>
+		<div class="wages">
+			<div class="wages_box">
+				工时:<span>100</span>小时
+			</div>
+			<div class="line"></div>
+			<div class="wages_box">
+				预计工资:<span>100</span>元
+			</div>
+		</div>
+	</div>
+	<div class="wages_detail">
+		工资详情<i class="iconfont">&#xe65f;</i>
+	</div>
+	<div class="word_size">
+		字体大小<i class="iconfont">&#xe65f;</i>
+	</div>
+	<div class="button">退出登录</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/iconfont.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+			openInfo();
+			openWages();
+			openFontsize();
+			logOut();
+//      var head=$api.byId("header");
+//      $api.fixStatusBar(head);
+
+		api.addEventListener({
+				name: 'Font_normal'
+		}, function(ret, err) {
+				$('html').css("font-size","125%");
+		});
+		api.addEventListener({
+				name: 'Font_big'
+		}, function(ret, err) {
+				$('html').css("font-size","156.25%");
+		});
+
+    };
+		function openInfo(){
+			$('.Inf_active_box').on('click',function(){
+				api.openWin({
+						name: 'mine_detail',
+						url: './mine_detail.html',
+						pageParam: {
+								name: 'test'
+						}
+				});
+			})
+		}
+		function openWages(){
+			$('.wages,.wages_detail').on('click',function(){
+				api.openWin({
+						name: 'wages_detail',
+						url: './wages_detail_header.html',
+						pageParam: {
+								name: 'test'
+						}
+				});
+			})
+		}
+		function openFontsize(){
+			$('.word_size').on('click',function(){
+				api.openWin({
+						name: 'Font_size',
+						url: './Font_size.html',
+						pageParam: {
+								name: 'test'
+						}
+				});
+			})
+		}
+		function logOut(){
+			$('.button').on('click',function(){
+				api.openWin({
+				    name: 'kjt_sign_in',
+				    url: './kjt_sign_in.html',
+				    pageParam: {
+				        name: 'test'
+				    }
+				});
+
+			})
+		}
+</script>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>活动详情头部</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    .bai-tou{
+    	background:#00ccff;
+    	}
+    	#header{
+    		position:fixed;
+    		top:0;
+    	}
+    	
+    .Active-back{
+		width: 1rem;
+		height: 1rem;
+		float: left;
+		margin-top:0.5rem;
+		margin-left:0.3rem;
+	}
+	.Active-Details_share{
+		width: 1.2rem;
+		height: 1.2rem;
+	
+
+	}
+	.bai-entry-p{
+            margin: 0 auto;
+            width: 100%;
+            color: white;
+            background: #00ccff;
+        }
+      .bai-entry-p:active{
+      color:#00ccff;
+      background:#fff;
+      } 
+       
+         .Active-details_bgp{
+       	width: 100%;
+       	height: 10rem;
+       	position:relative;
+       }
+      
+       .Active-details_shadow{
+       position:absolute;
+       top:9.0rem;
+       	height: 1.7rem;
+       	width:90%;
+       	margin-left:0.05rem;
+       	border: 0.1rem solid #F5F5F5;
+       	border-radius:0.2rem;
+       	box-shadow: 0.15rem 0.15rem 0.5rem ;
+       	background:#FFFFFF;
+       
+       	padding-top:0.2rem;
+       }
+       .Active-details_shadow span{
+       display:block;
+       width:100%;
+       text-align:center;
+       	font-size:0.75rem;
+       	/*font-style: none;*/
+       	color: #000;
+       }
+       .Active-details_people{
+       	overflow: hidden;
+       	margin: 1.5rem 0.5rem 0 0.5rem;
+
+       }
+       .Active-details_sp1{
+       	float: left;
+       	color: #9e9e9e;
+       	font-size: 0.6rem;
+       }
+       .Active-details_sp2{
+       	float: right;
+       	color: #9e9e9e;
+       	font-size: 0.6rem;
+       }
+       .Active-details_hr{
+       	width: 98%;
+       	margin-left: 1%;
+       	margin-right:1%;
+       	border-top: 0.1rem solid #f2f2f2;
+       	padding-top: 0.4rem;
+       }
+       .Active-details_littlep{
+     
+       	display: inline-block;
+       	float: left;
+        margin-left: 0.5rem;
+
+       
+       }
+       .Active-details_littlep1{
+       	position: absolute;
+       	width: 1.5rem;
+       	height: 1.5rem;
+       	right: 1rem;
+       	bottom: 0.5rem;
+
+    
+       
+       }
+       .Active-details_lm{
+       	margin-top: 0.3rem;
+       	position: relative;
+       }
+       .Active-details_lm span{
+       	font-size: 0.65rem;
+       	margin-left: 1rem;
+       }
+       .Active-details_littlesp{
+       	display: inline-block;
+       	width: 12rem;
+       	font-size: 0.65rem;
+       	margin-left: 1rem;
+       	margin-right: 1rem;
+
+       }
+       .Active-details_cont{
+       	overflow: hidden;
+       }
+       .Active-details_contleft{
+       	float: left;
+       }
+       .Active-details_contright{
+       	float: left;
+       	margin-left: 1.2rem;
+
+       }
+       .Active-details_contright div span{
+       	font-size: 0.65rem;
+       }
+       .Active-details_photo{
+       	width: 3rem;
+       	height: 3rem;
+       	border-radius: 3rem;
+       }
+       .Active-details_V{
+       	width: 1rem;
+       	height: 1rem;
+       	border-radius: 0.5rem;
+       }
+       .Active-details_zl{
+      
+       	padding: 0.9rem 0.5rem;
+       	overflow: hidden;
+       	
+       }
+       .Active-box{
+       margin:1rem 0.2rem 0.2rem 0.2rem;
+       border: 0.05rem solid #D7D7D7;
+       }
+      
+       
+       .Active-details_ibox{
+       	position: relative;
+       	float: left;
+       }
+       .Active-details_Vbox{
+       	width: 1rem;
+       	height: 1rem;
+       	position: absolute;
+       bottom: 0rem;
+       right: 0.2rem;
+       background: yellow;
+       border-radius: 3rem;
+
+       }
+       .Active-details_tbox{
+       	width: 12rem;
+       	float: right;
+       	overflow: hidden;
+       }
+       .Active-details_tbox p{
+       	margin: 0;
+       	font-size: 0.65rem;
+       	margin-top: 0.5rem;
+       }
+       .Active-details_namebox{
+       	
+       }
+       .Active-details_namebox h3{
+       	margin: 0;
+       	display: inline-block;
+       }
+       .Active-details_lv{
+    	background:#00ccff;
+    	color: white;
+    	border-radius: 2rem;
+    	font-size:0.2rem;
+    	margin:0 auto;
+    	padding: 0.15rem;
+    }
+    .Active-details_bignum{
+    	font-size: 1.5rem;
+    }
+    .Active-details_bbox{
+    	overflow: hidden;
+       padding-bottom:0.9rem;
+    }
+    .Active-details_blbox{
+    	float: left;
+    	margin-left: 2rem;
+    }
+    .Active-details_brbox{
+    	float: right;
+    	margin-right: 3rem;
+    }
+    .Active-details_bline{
+    	display: inline-block;
+    	width: 0;
+    	height: 2rem;
+    	margin-left: 2.5rem;
+    	border-left: 0.1rem solid #9e9e9e;
+    }
+    .Active-details_guss span{
+    	font-size: 0.6rem;
+    	color: #00ccff;
+    	margin-bottom:0.55rem;
+    }
+    .Active-details_guss{
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+    .Active-details_littleline{
+    	width: 4rem;
+    	height: 0;
+    	border-top: 0.1rem solid #00ccff;
+    	display: inline-block;
+    	
+    }
+    .Active-details_littleline1{
+    	width: 4rem;
+    	height: 0;
+    	border-top: 0.1rem solid #00ccff;
+    	display: inline-block;
+    	
+    }
+    .Active-LV{
+    	background:#00ccff;
+    	color: white;
+    	border-radius: 1rem;
+    	font-size:0.2rem;
+    	margin:0 auto;
+      padding: 0.1rem;
+    }
+    .Active-superscript{
+      	width:3rem;
+      	height: 3rem;
+      	float:left;
+    }
+     .Active-img{
+    	height: 8rem;
+    }
+    .Active-p{
+    	font-size:0.6rem;
+    	
+    }
+    .Active-content{
+		position:relative;
+		}
+	.Active-person{
+		position:absolute;
+		bottom: 0;
+		right: 0;
+		font-size: 0.5rem;
+	}
+  .Active-details_about p{
+    font-size: 0.6rem;
+    padding:0.2rem 1rem;
+  }
+
+ .Active-small{
+        margin-right: 0.5rem;
+    }
+       
+     
+       .Active-details_body{
+       position:relative;
+       }
+       
+       
+       
+       .add_div1{
+        	height: 9rem;
+        	width: 100%;
+        	background:white;
+            position: fixed;
+            bottom: 0;
+        }
+        .add_div2{
+        	height: 1.8rem;
+        	width: 84%;
+        	margin:0 auto;
+        	background:white;
+            padding:0.75rem 0;
+        }
+        .add_div4{
+        	width: 100%;
+            height: 1.2rem;
+        	background:white;
+        	padding:0.75rem 0;
+        }
+        .add_div3{
+        	height: 6.25rem;
+        	width: 84%;
+        	margin:0 auto;
+        	background:white;
+        	border-top:0.07rem solid #DDDDDD;/*
+        	border-bottom:0.07rem solid #DDDDDD;*/
+            padding:0.75rem 0;
+        }
+        .add_span{
+            font-family: "微软雅黑  ";
+            display: block;
+        	font-size:0.9rem;
+        	width: 5rem;
+        	margin:0 auto;
+            text-align: center;
+        }
+        .span1{
+            font-family: "微软雅黑  ";
+            display: block;
+        	font-size:0.7rem;
+        	width: 5rem;
+            text-align: left;
+        }
+        .add_div3_div{
+        	height: 100%;
+        	width: 25%;
+        	float: left;
+        }
+        .add_div3_div img{
+        	display:block;
+        	height: 2.5rem;
+        	width: 2.5rem;
+        	margin: 0.85rem auto;
+        }
+        .add_div3_div span{
+        	display:block;
+        	width:100%;
+        	text-align:center;
+        	color:#BCBCBC;
+        	font-size:0.65rem;
+        	font-family:"微软雅黑";
+        	margin: 0.5rem auto;
+        }
+    </style>
+</head>
+<body>
+    
+	
+	<header class="aui-bar aui-bar-nav bai-tou" id="header">
+    <a class="aui-pull-left aui-btn" onclick="api.closeWin({
+        });">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">活动详情</div>
+    <a class="aui-pull-right aui-btn" aui-popup-for="bottom">
+	        <img src="../image/Active-share.png" alt="" class="Active-Details_share" >
+	    </a>
+    </header>
+	
+	<div class="top"></div>
+	<div class="Active-details_body">
+	<div>
+		<img src="../image/Active-slide1.jpg" alt="" class="Active-details_bgp">
+		<div class="Active-details_shadow">
+		<span>“人工智能吉大讨论组”--探究计算机的秘密</span>
+	</div>
+	</div>
+	
+	<div class="Active-details_people">
+		<span class="Active-details_sp1">浏览9854次</span>
+		<span class="Active-details_sp2">21/30</span>
+	</div>
+	<div class="Active-details_hr"></div>
+	<div class="Active-details_lm">
+		<img src="../image/Active-time.png" alt="" class="Active-details_littlep" style="  	width: 1.2rem;
+       	height: 1.2rem;">
+		<span>2017.03.31</span>
+		<span>18:00~20:00</span>
+	</div>
+	<div class="Active-details_hr"></div>
+	
+	<div class="Active-details_lm">
+		<img src="../image/Active-plan.png" alt="" class="Active-details_littlep" style="width: 1.32rem;height: 1.32rem">
+		<div class="Active-details_littlesp">吉林省长春市吉林大学前卫校区南区经信教学楼 F11</div>
+		<img src="../image/jian.png" alt="" class="Active-details_littlep1">
+	</div>
+	<div class="Active-details_hr"></div>
+	
+	<div class="Active-details_cont">
+		<div class="Active-details_contleft">
+		<img src="../image/Active-cp.png" alt="" class="Active-details_littlep" style="width: 1.2rem;
+       	height: 1.2rem;"></div>
+		<div class="Active-details_contright">
+			<div>
+				<span class="Active-details_littleword">联系人：</span>
+				<span class="Active-details_littleword">袁琳</span>
+			</div>
+			<div>
+				<span class="Active-details_littleword">联系电话：</span>
+				<span class="Active-details_littleword">13564877456</span>
+			</div>
+			<div>
+				<span class="Active-details_littleword">微信：</span>
+				<span class="Active-details_littleword">yuanlin2666</span>
+			</div>
+			<div>
+				<span class="Active-details_littleword">邮箱：</span>
+				<span class="Active-details_littleword">256847545@qq.com</span>
+			</div>
+		</div> 	
+	</div>
+	<div class="Active-details_hr"></div>
+	<div class="Active-details_about"><p>简介:</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。</p>
+	</div>
+	<div class="Active-details_hr"></div>
+	<div class="Active-box">
+	
+	<!-- 710 -->
+		<div class="Active-details_zl">
+			<div class="Active-details_ibox">
+				<div class="Active-details_phbox" onclick="api.openWin({
+	                name: 'Mine_Login_ziliao_header',
+	                url: 'Mine_Login_ziliao_header.html'
+                });"><img src="../image/Active-tx.png" alt="" class="Active-details_photo"></div>
+				<div class="Active-details_Vbox"><img src="../image/Active-VIP.png" alt="" class="Active-details_V"></div>
+			</div>
+			<div class="Active-details_tbox">
+				<div class="Active-details_namebox">
+					<h3>I Robort 233</h3>
+					<span class="Active-details_lv">LV4</span>
+				</div>
+				<p>人工智能是对人的意识，思维等信息进行过程的模拟，人工智能不是人的智能，但能像人一样思考学习</p>
+			</div></div >
+		
+		
+		<div class="Active-details_bbox">
+  			<div class="Active-details_blbox">
+    				<span  class="Active-details_bignum">180</span>
+    				<span>关注</span>
+  			</div>
+  			<div class="Active-details_bline"></div>
+  			<div class="Active-details_brbox">
+    				<span class="Active-details_bignum">43</span>
+    				<span>活动</span>
+  			</div>
+		</div>
+	</div>
+	</div>
+	<div class="end"></div>
+	
+	<footer class="aui-bar aui-bar-tab" id="footer">
+		<div class=" aui-btn-block bai-entry-p" onclick="fnlogin1()">报名</div>
+	</footer>
+	
+	
+	<div class="aui-popup " id="bottom">
+
+        <div class="add_div1">
+        	<div class="add_div2">
+        		<span class="span1">分享到</span>
+        	</div>
+        	<div class="add_div3">
+        		<div class="add_div3_div">
+        			<img src="../image/baiqqkongjian.png" />
+        			<span>qq空间</span>
+        		</div>
+        		<div class="add_div3_div">
+        			<img src="../image/baiQQ.png" />
+        			<span>qq好友</span>
+        		</div>
+        		<div class="add_div3_div">
+        			<img src="../image/baiweixin2.png" />
+        			<span>微信</span>
+        		</div>
+        		<div class="add_div3_div">
+        			<img src="../image/baiweibo2.png" />
+        			<span>微博</span>
+        		</div>
+        	</div>
+			
+        </div>
+
+
+	</div>
+
+	
+	
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-popup.js" ></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        var header=$api.byId('header');$api.fixStatusBar(header);
+        var footer = $api.byId('footer');
+    	var headerH=$api.offset(header).h;
+    	var footerH = $api.offset(footer).h;
+    	
+    	
+    	$(".top").css("height",headerH);
+    	$(".end").css("height",footerH);
+    	var bottom=$api.byId('bottom');
+    	bottom.style.display="none";
+
+  };
+    function fnlogin1(){
+    var apply=document.querySelector('.bai-entry-p');
+    	apply.innerText="已报名";
+    	apply.style.background="#ccc";
+    }
+     var popup = new auiPopup();
+    function showPopup(){
+        popup.show(document.getElementById("bottom"));
+       
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+</html>

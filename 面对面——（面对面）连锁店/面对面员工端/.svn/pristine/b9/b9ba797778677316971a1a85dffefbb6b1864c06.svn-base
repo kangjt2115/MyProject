@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/wages_detail.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left"></span>
+        </div>
+        <div class="aui-title titlecol">工资详情</div>
+        <div class="aui-pull-right aui-btn Sub">
+            <i class="iconfont det" style="font-size: 1.5rem;">&#xe710;</i>
+            <div class="classify">
+            	<div class="horn"></div>
+            	<div class="week orange">本周</div>
+            	<div class="mouth">本月</div>
+            </div>
+        </div>
+    </header>
+    <div class="Work_Hour">
+    	<span class="left">本月工时</span>
+    	<span class="right"><span>87</span>小时</span>
+    </div>
+    <div class="plan_wages">
+    	<span class="left">应得工资</span>
+    	<span class="right"><span>870</span>元</span>
+    </div>
+    <div class="true_wages">
+    	<span class="left">实得工资</span>
+    	<span class="right"><span>690</span>元</span>
+    </div>
+    <span class="span_detail">工薪变动详情:</span>
+    <div class="wages_detail">
+    	<span class="time">2017/1/12</span>
+    	<span class="area">长大店</span>
+    	<span class="reason_Late">迟到</span>
+    	<span class="amount"><span>-100</span>元</span>
+    </div>
+    <div class="wages_detail gray">
+    	<span class="time">2017/1/13</span>
+    	<span class="area">吉大店</span>
+    	<span class="reason_Leave">早退</span>
+    	<span class="amount"><span>-100</span>元</span>
+    </div>
+    <div class="wages_detail">
+    	<span class="time">2017/1/14</span>
+    	<span class="area">理工店</span>
+    	<span class="reason_Absenteeism">旷工</span>
+    	<span class="amount"><span>-100</span>元</span>
+    </div>
+    <div class="wages_detail gray">
+    	<span class="time">2017/1/15</span>
+    	<span class="area">二道白店</span>
+    	<span class="reason_Change">工时变动</span>
+    	<span class="amount"><span>+100</span>元</span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/iconfont.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		var head=$api.byId("header");
+        $api.fixStatusBar(head);
+        
+        $('.det').on('click',function(){
+        	$('.classify').toggleClass('hide');
+        });
+	};
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/employeeTrain_details.css" />
+</head>
+
+<body>
+    <!-- 视频 -->
+
+    <video controls>
+      <source src="../video/movie.mp4" type="video/mp4">
+    </video>
+
+    <!-- 内容 -->
+    <div class="content">
+      <div class="title">文化介绍</div>
+      <div>
+        <img src="../image/culture.png" alt="">
+      </div>
+      <p class="bottom">
+        <div class="zi_title">企业愿景： </div>
+        <p>提高人们的生命质量，让更多的人吃到放心、健康的中华美食！ </p>
+      </p>
+      <p class="bottom">
+        <div class="zi_title">企业宗旨： </div>
+        <p>成为中国最受喜爱、最受信赖、最受尊敬的餐饮连锁企业！ </p>
+      </p>
+      <p class="bottom">
+        <div class="zi_title">核心价值观： </div>
+        <p class="bottom"><span>追求：</span>在餐饮服务领域实现顾客吃的放心、健康，并尽心尽力使我们成为世界级的餐饮连锁企业。 </p>
+        <p class="bottom"><span>员工：</span>认真、负责和管理有效的员工是企业最大的财富，尊重做出有效贡献的每一位员工。 </p>
+        <p class="bottom"><span>顾客：</span>在保证顾客饮食安全和健康的基础上，以服务顾客为导向，为大众提供丰富多样、便捷质优的民俗美食。 </p>
+        <p class="bottom"><span>文化：</span>面对面传承民族的饮食习惯，依存地域自然生态食材资源，开发适合现 </p>
+        <p class="bottom"><span>社会责任：</span>面对面以产业报国和科农兴国为己任，立志以面对面品牌的发展，为实现订单生态农业的发展做出贡献。 </p>
+        <p class="bottom"><span>利益：</span>主张以诚信、合作、共赢的原则，实现顾客、员工、合作者间成为利益共同体，在合法、合规的基础上自愿参与股权投资，分享利益成果。 </p>
+        <p class="bottom"><span>人际关系：</span>正确的人际关系是：真诚的相互沟通、默契的团队合作、积极的自我发展、无私的培养他人。 </p>
+        <p class="bottom"><span>经营理念：</span>诚信  合作  同进  共赢 </p>
+      </p>
+    </div>
+
+    <div class="submit">
+      <span>完成</span>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+    
+    	var user = $api.getStorage('user');
+		if(user.font_size=='normal'){
+			$('html').css("font-size","125%");
+		}else if(user.font_size=='big'){
+			$('html').css("font-size","156.25%");
+		}
+    
+      api.addEventListener({
+          name: 'Font_normal'
+      }, function(ret, err) {
+          $('html').css("font-size","125%");
+      });
+      api.addEventListener({
+          name: 'Font_big'
+      }, function(ret, err) {
+          $('html').css("font-size","156.25%");
+      });
+    };
+</script>
+
+</html>

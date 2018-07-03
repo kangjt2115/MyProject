@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/employeeTrain_good.css" />
+</head>
+
+<body>
+    <div class="jiange"></div>
+
+    <!-- 列表 -->
+    <div class="list_frame" onclick="goDetail()">
+      <img src="../image/new.png" class="img">
+      <span class="titk">三黄鸡单面</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="goDetail()">
+      <img src="../image/new.png" class="img">
+      <span class="titk">蘑菇面</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="goDetail()">
+      <span class="titk deltu">凉拌三丝</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="goDetail()">
+      <span class="titk deltu">牛肉面</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+    
+    	var user = $api.getStorage('user');
+		if(user.font_size=='normal'){
+			$('html').css("font-size","125%");
+		}else if(user.font_size=='big'){
+			$('html').css("font-size","156.25%");
+		}
+    
+      api.addEventListener({
+          name: 'Font_normal'
+      }, function(ret, err) {
+          $('html').css("font-size","125%");
+      });
+      api.addEventListener({
+          name: 'Font_big'
+      }, function(ret, err) {
+          $('html').css("font-size","156.25%");
+      });
+    };
+    function  goDetail(){
+      api.openWin({
+          name: 'employeeTrain_details_header',
+          url: './employeeTrain_details_header.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+</script>
+
+</html>

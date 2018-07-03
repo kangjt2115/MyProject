@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left"></span>
+        </div>
+        <div class="aui-title titlecol">离职审批</div>
+    </header>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">申请人</span>
+      <span class="aui-iconfont right">张浩哲</span>
+    </div>
+    <div class="tag">离职原因：</div>
+    <div class="text_frame">最近身体不适。学校作业太多。打游戏没时间来。累。   </div>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">归还工作服</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="list_frame">
+      <span class="">归还胸牌</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="tag">备注：</div>
+    <div class="text_frame">张浩哲打游戏确实很累，作业很多，身体不适  。。。</div>
+    <div class="tag"></div>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">状态：</span>
+      <span class="right success" >审批通过</span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+
+    };
+</script>
+</html>

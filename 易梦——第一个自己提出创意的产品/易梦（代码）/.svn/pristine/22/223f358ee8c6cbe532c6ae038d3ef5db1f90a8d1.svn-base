@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>搜索</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+      body{
+        background: #f5f5f5;
+      }
+    	.Active-search-span{
+    		margin-left:1rem;
+    		color: #9e9e9e;
+
+    	}
+        .Active-search-box{
+        padding-left:1rem;
+        margin-top: 0.1rem;
+        background: #ffffff;
+
+      }
+    </style>
+</head>
+<body>
+           <!--搜索框-->
+     <!---历史记录-->	
+   	<div class="Active-search-box  ">
+   		<span class="aui-font-size-16" style="color: #9e9e9e;">输入记录</span>
+   	</div>
+   	<div class="Active-search-box  ">
+	   	<i class="aui-iconfont aui-icon-search"></i>
+	   	<span class="aui-font-size-14 Active-search-span">夜跑</span>
+   	</div>
+   	<div class="Active-search-box  ">
+	   	<i class="aui-iconfont aui-icon-search"></i>
+	   	<span class="aui-font-size-14 Active-search-span">惠普风筝节</span>
+   	</div>
+   	<div class="Active-search-box  ">
+	   	<i class="aui-iconfont aui-icon-search"></i>
+	   	<span class="aui-font-size-14 Active-search-span">环湖自行车赛</span>
+   	</div>
+   	<div class="Active-search-box  ">
+	   	<i class="aui-iconfont aui-icon-search"></i>
+	   	<span class="aui-font-size-14 Active-search-span">沙漠之旅</span>
+   	</div>
+   	<div class="Active-search-box  ">
+	   	<i class="aui-iconfont aui-icon-search"></i>
+	   	<span class="aui-font-size-14 Active-search-span">清明长白行</span>
+   	</div>
+   	<div class="Active-search-box  ">
+	   	<i class="aui-iconfont aui-icon-search"></i>
+	   	<span class="aui-font-size-14 Active-search-span">南湖夜泳</span>
+   	</div>
+   	
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+
+</html>

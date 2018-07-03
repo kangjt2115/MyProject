@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>粉丝</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		.bai-tou{
+			background: #00ccff;
+		}
+	</style>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav bai-tou" id="header">
+    <a class="aui-pull-left aui-btn" onclick="fnlogin()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">粉丝</div>
+    </header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	function fnlogin(){
+		api.closeWin({
+        });
+	}
+    apiready = function() {
+    	var header = $api.byId('header');
+    	$api.fixStatusBar(header);
+    	var headerH = $api.offset(header).h;
+    
+		api.openFrame({
+			name: 'Mine_Login_Fans',
+			url: './Mine_Login_Fans.html',
+			rect: {
+				x:0,
+				y:headerH,
+				w:'auto',
+				h:'auto',
+			}
+		});
+    	
+    }
+</script>
+</html>

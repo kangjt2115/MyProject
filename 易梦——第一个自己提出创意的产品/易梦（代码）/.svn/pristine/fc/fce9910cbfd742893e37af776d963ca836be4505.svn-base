@@ -1,0 +1,33 @@
+.Active-LV{
+    	background:#00ccff;
+    	color: white;
+    	border-radius: 1rem;
+    	font-size:0.3rem;
+    	margin:0 auto;
+        padding: 0.1rem;
+    	}
+    	.Active-small{
+        margin-right: 0.7rem;
+    	}
+    	.Active-person{
+		position:absolute;
+		bottom: 0;
+		right: 0.7rem;
+		font-size: 0.5rem;
+		}
+		.active-box1{
+			margin:0;
+			padding: 0.6rem 0 0.3rem 0;
+			border-bottom: 1px solid #f2f2f2;
+		}
+		.active-box2{
+			margin-left: 0.8rem;
+			font-size: 0.8rem;
+		}
+		.active-box3{
+			padding-left: 0.8rem; 
+			font-size: 0.6rem;
+		}
+		.Active-p1{
+    		margin: 0.5rem 0;
+    	}

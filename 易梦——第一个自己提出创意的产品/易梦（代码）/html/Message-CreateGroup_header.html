@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<title>title</title>
+	<link rel="stylesheet" type="text/css" href="../css/api.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+	<style>
+		
+	#header{
+		background:#00ccff;
+	}
+	.bai-entry-p{
+            margin: 0 auto;
+            /*margin-bottom: 0.4rem;*/
+            width: 99%;
+            color: white;
+            background: #00ccff;
+        }
+
+	</style>
+</head>
+<body>
+	
+	<header class="aui-bar aui-bar-nav bai-tou" id="header">
+    <a class="aui-pull-left aui-btn" onclick="back()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">编辑群信息</div>
+    </header>
+    <footer style="width:100%;position: fixed; bottom: 0;" id="footer">
+		<p><div class="aui-btn aui-btn-block bai-entry-p" onclick="fnlogin1()">提交</div></p>
+	</footer>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		var header=$api.byId('header');$api.fixStatusBar(header);
+        var footer = $api.byId('footer');
+    	var headerH=$api.offset(header).h;
+    	var footerH = $api.offset(footer).h;
+    
+    	api.openFrame({
+    	    name: 'Message-CreateGroup_frame',
+    	    url: './Message-CreateGroup_frame.html',
+    	    rect: {
+    	        x: 0,
+    	        y: headerH,
+    	        w: 'auto',
+    	        h: api.winHeight-headerH-footerH,
+    	    },
+    	    pageParam: {
+    	        name: 'test'
+    	    },
+    	    bounces: false,
+    	    
+    	});
+	};
+	function back(){
+    api.closeWin({
+    });
+    }
+</script>
+</html>

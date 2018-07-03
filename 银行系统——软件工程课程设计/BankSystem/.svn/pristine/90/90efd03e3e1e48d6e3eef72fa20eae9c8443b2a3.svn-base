@@ -1,0 +1,61 @@
+<style type="text/css">
+	.KJT-blank{
+		margin-left: 15px;
+	}
+	.KJT-mt-10{
+		margin-top: 10px;
+	}
+	.KJT-rt{
+		float: right;
+	}
+	
+</style>
+
+<div class="row">
+	<div class="container-fluid" >
+		<ol class="breadcrumb">
+		  <li>签到查看</li>
+		  
+		</ol>
+	</div>
+</div>
+
+
+
+<div class="row KJT-mt-10">
+	<div class="container-fluid">
+        <table class="table table-bordered table-hover">
+            <tbody>
+            	<tr class="active">
+            		<th width="3%">序号</th>
+	                <th width="13%">签到主题</th>
+	                <th width="14%">签到简介</th>
+	                <th width="10%">签到发起方</th>
+	                <th width="12%">时间</th>
+	                <th width="10%">地点</th>  
+	                <th width="8%">当前签到人数</th>
+	                <th width="8%">是否结束</th>
+	                <th>操作</th>
+	            </tr>
+            </tbody>
+            <tbody id="arcListView">
+				
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+	<div class="container-fluid">
+		<ul class="pagination" id="ZCC-pager">
+
+	    </ul>
+	</div>
+</div>
+<script src="components/signCheck/index.js"></script>
+<script type="text/javascript">
+	var signCheck=new KJT.component.signCheck({
+		$TableContentWrapper:$("#arcListView"),
+		$Pager:$("#ZCC-pager"),
+	});
+</script>

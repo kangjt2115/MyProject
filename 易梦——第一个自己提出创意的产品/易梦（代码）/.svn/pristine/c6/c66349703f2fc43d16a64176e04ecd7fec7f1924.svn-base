@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+        html{
+            background: #f2f2f2;
+        }
+    	#header{
+            background: #00ccff;
+            position: fixed;
+            top: 0;
+            bottom: auto;
+        }
+        .box{
+            background: #fff;
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            overflow: hidden;
+        }
+        .top{
+            height: 2.3rem;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        .img1{
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 1.2rem;
+            float: left;
+        }
+        .right1{
+            float: left;
+            margin-left: 0.75rem;
+        }
+        .mingzi{
+            font-size: 0.8rem;
+        }
+        .shijian{
+            font-size: 0.6rem;
+        }
+        
+        .zhao{
+            margin-top: 0.3rem;
+        }
+        .tu{
+            overflow: hidden;
+        }
+        .img3{
+            width: 7rem;
+            height: 5.5rem;
+            float: left;
+        }
+        .img2{
+            width: 7rem;
+            height: 7rem;
+            float: left;
+        }
+        .photobox{
+        margin-top: 2.8rem;
+        }
+    </style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+        <a class="aui-pull-left aui-btn" onclick="back()">
+            <span class="aui-iconfont aui-icon-left"></span>返回
+        </a>
+        <div class="aui-title">群相册</div>
+        <a class="aui-pull-right aui-btn" onclick="openMine_Login_PhotoWall_header()">上传</a>
+    </header>
+    <div class="photobox">
+    <div class="box">
+        <div class="top">
+            <img class="img1" src="../image/dd.jpg">
+            <div class="right1">
+                <span class="mingzi">15 信用 青煦涵</span>
+                <p class="shijian">2016-07-08 16:39</p>
+            </div>
+        </div>
+        <div class="tu">
+            <img class="img3" src="../image/wan.jpeg">
+            <img class="img3" src="../image/paobu.jpg">
+        </div>
+        <p class="zhao">上传一张照片</p>
+    </div>
+    <div class="box">
+        <div class="top">
+            <img class="img1" src="../image/siji.jpg">
+            <div class="right1">
+                <span class="mingzi">15 软件 刘兴凯</span>
+                <p class="shijian">2016-07-08 15:49</p>
+            </div>
+        </div>
+        <div class="tu">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/wenxuan.jpg">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/ee.jpeg">
+            <img class="img3" src="../image/ee.jpeg">
+        </div>
+        <p class="zhao">上传三张照片</p>
+    </div>
+    <div class="box">
+        <div class="top">
+            <img class="img1" src="../image/cc.gif">
+            <div class="right1">
+                <span class="mingzi">15 应物 杨博闻</span>
+                <p class="shijian">2016-07-08 16:39</p>
+            </div>
+        </div>
+        <div class="tu">
+            <img class="img2" src="../image/bb.jpeg">
+            <img class="img2" src="../image/ff.jpeg">
+        </div>
+        <p class="zhao">上传三张照片</p>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+        var header=$api.byId('header');
+		$api.fixStatusBar(header);
+	};
+	function back(){
+	api.closeWin({
+    });
+	}
+	function openMine_Login_PhotoWall_header(){
+	api.openWin({
+	    name: 'Mine_Login_PhotoWall_header.html',
+	    url: 'Mine_Login_PhotoWall_header.html'
+    });
+	}
+</script>
+</html>

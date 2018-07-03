@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    	#header{
+            background: #00ccff;
+            position:fixed;
+            top:0;
+            bottom:auto;
+        }
+        #search{
+            background: #fff;
+        }
+        .aui-searchbar .sosuo{
+            background: #f2f2f2;
+        }
+        .qunzhu0{
+            background: #f2f2f2;
+            padding: 0.15rem 0.5rem;
+            font-size: 0.7rem;
+        }
+        .qunzhu1{
+            background: #fff;
+            height: 3rem;
+            padding: 0.3rem 0.6rem;
+            overflow: hidden;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .img1{
+            float: left;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 1.2rem;
+        }
+        .mingzi{
+            font-size: 0.8rem;
+            margin-left: 0.3rem;
+            margin-top: 0.5rem;
+        }
+        .level{
+            margin-left: 0.5rem;
+        }
+        .memberbox{
+        margin-top:2.3rem;
+        }
+    </style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+        <a class="aui-pull-left aui-btn" onclick="back()">
+            <span class="aui-iconfont aui-icon-left"></span>返回
+        </a>
+        <div class="aui-title">群成员</div>
+    </header>
+    <div class="memberbox">
+    <div class="aui-searchbar" id="search">
+        <div class="aui-searchbar-input aui-border-radius sosuo" tapmode onclick="doSearch()">
+            <i class="aui-iconfont aui-icon-search"></i>
+            <form action="javascript:search();">
+                <input type="search" placeholder="搜索" id="search-input">
+            </form>
+        </div>
+    </div>
+    <div class="qunzhu">
+        <p class="qunzhu0">群主</p>
+        <div class="qunzhu1">
+            <img class="img1" src="../image/cc.gif">
+            <span class="aui-label aui-label-warning level">level8</span>
+            <span class="mingzi">15-数学-尹佳琳</span>
+        </div>
+    </div>
+    <div class="qunzhu">
+        <p class="qunzhu0">群成员</p>
+        <div class="qunzhu1">
+            <img class="img1" src="../image/siji.jpg">
+            <span class="aui-label aui-label-warning level">level2</span>
+            <span class="mingzi">15-应物-杨博闻</span>
+        </div>
+        <div class="qunzhu1">
+            <img class="img1" src="../image/dd.jpg">
+            <span class="aui-label aui-label-warning level">level4</span>
+            <span class="mingzi">15-信用-青煦涵</span>
+        </div>
+        <div class="qunzhu1">
+            <img class="img1" src="../image/chenpao.gif">
+            <span class="aui-label aui-label-warning level">level0</span>
+            <span class="mingzi">14-电子-陈小帆</span>
+        </div>
+        <div class="qunzhu1">
+            <img class="img1" src="../image/ff.jpeg">
+            <span class="aui-label aui-label-warning level">level3</span>
+            <span class="mingzi">13-地质-刘海龙</span>
+        </div>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		var header=$api.byId('header');
+		$api.fixStatusBar(header);
+	};
+	function back(){
+	api.closeWin({
+    });
+	}
+</script>
+</html>

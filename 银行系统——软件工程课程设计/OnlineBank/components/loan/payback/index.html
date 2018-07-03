@@ -1,0 +1,50 @@
+<style type="text/css">
+    .KJT-mt-20{
+		margin-top: 10px;
+	}
+	.KJT_btn{
+		background: #1e90ff;
+		color: #fff;
+	}
+	.info{
+		margin-left: 10px;
+		color: #ff5809;
+		font-size: 14px;
+	}
+</style>
+<div class="row">
+	<div class="container-fluid" >
+		<ol class="breadcrumb">
+		  <li>还款</li>
+		</ol>
+	</div>
+</div>
+
+<div class="row KJT-mt-20" id="KJT_list">
+	<div class="container-fluid">
+        <table class="table table-bordered table-hover">
+            <tbody>
+            	<tr class="active">
+            		<th width="3%">序号</th>
+	                <th width="13%">贷款种类</th>  
+	                <th width="10%">贷款金额</th>  
+	                <th width="10%">贷款利率</th>  
+	                <th width="12%">偿还方式</th>
+	                <th width="12%">抵押物</th>
+	                <th width="11%">生效日</th>
+	                <th width="11%">到期日</th>
+	                <th>操作</th>
+	            </tr>
+            </tbody>
+            <tbody id="arcListView">
+				
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="components/loan/payback/index.js"></script>
+<script type="text/javascript">
+	new KJT.component.packback({
+		$TableContentWrapper:$("#arcListView"),
+	});
+</script>

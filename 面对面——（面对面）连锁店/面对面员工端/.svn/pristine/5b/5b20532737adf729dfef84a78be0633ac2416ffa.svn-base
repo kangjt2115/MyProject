@@ -1,0 +1,129 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+body {
+	padding-top:1rem;
+	background:#f2f2f2;
+	width: 100%;
+	height: 100%;
+}
+.MyInf{
+	width: 100%;
+	height: 11.75rem;
+	background:#fff;
+	margin-bottom: 0.5rem;
+}
+.Inf_active_box{
+	width: 100%;
+	padding: 1.5rem 0.75rem;
+	height: 8rem;
+	border-bottom: 1px solid #E6E6E6;
+}
+.Inf_active_box:active{
+	background: #fafafa;
+}
+.head_Img{
+	width: 5rem;
+	height: 5rem;
+	float:left;
+	overflow: hidden;
+	margin-right:0.75rem;
+}
+.Img{
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+}
+.Inf{
+	height: 5rem;
+	color:#282828;
+	font-family: "微软雅黑";
+	float:left;
+}
+.Name{
+	width: 7.5rem;
+	font-size:1rem;
+	display: block;
+	margin: 0.5rem 0;
+}
+.ID{
+	font-size:0.7rem;
+	display: block;
+}
+.Tel{
+	font-size:0.7rem;
+	display: block;
+}
+.right_icon{
+	height: 5rem;
+	line-height:5rem;
+	float:right;
+}
+.wages{
+	width: 100%;
+	height: 3.75rem;
+	padding:0.75rem 0;
+}
+.line{
+	height: 2.25rem;;
+	width: 0.4%;
+	background:#E6E6E6;
+	float:left;
+}
+.wages_box{
+	width: 49.8%;
+	height:2.25rem;
+	text-align: center;
+	color: #FDA340;
+	font-size: 0.8rem;
+	font-family: "微软雅黑";
+	line-height: 2.25rem;
+	float:left;
+}
+.wages_detail{
+	width: 100%;
+	padding: 0 0.75rem;
+	height: 2.5rem;
+	background: #FFFFFF;
+	color:#282828;
+	font-size: 0.7rem;
+	font-family: "微软雅黑";
+	line-height: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+.wages_detail:active{
+	background: #fafafa;
+}
+.word_size{
+	width: 100%;
+	padding: 0 0.75rem;
+	height: 2.5rem;
+	background: #FFFFFF;
+	color:#282828;
+	font-size: 0.7rem;
+	font-family: "微软雅黑";
+	line-height: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+.word_size:active{
+	background: #fafafa;
+}
+.iconfont{
+	display:block;
+	float:right;
+}
+.button{
+	width: 100%;
+	margin-top:3.75rem;
+	height: 2.5rem;
+	background: #FFFFFF;
+	color:#FDA340;
+	font-size: 0.7rem;
+	font-family: "微软雅黑";
+	text-align:center;
+	line-height: 2.5rem;
+}
+.button:active{
+	background: #fafafa;
+}

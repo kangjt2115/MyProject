@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/wages_detail_header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+      <div class="aui-pull-left aui-btn">
+          <span class="aui-iconfont aui-icon-left" id="left"></span>
+      </div>
+      <div class="aui-title titlecol">工资详情</div>
+      <div class="aui-pull-right aui-btn Sub">
+          <i class="iconfont det" style="font-size: 1.5rem;">&#xe710;</i>
+      </div>
+  </header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/iconfont.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		closeWin();
+		var head=$api.byId("header");
+  	$api.fixStatusBar(head);
+		var headerH = $api.offset(head).h;
+
+		api.openFrame({
+		    name: 'wages_detail',
+		    url: './wages_detail.html',
+		    rect: {
+		        x: 0,
+		        y: headerH,
+		        w: 'auto',
+		        h: api.winHeight-headerH
+		    },
+		    pageParam: {
+		        name: 'test'
+		    }
+		});
+		api.addEventListener({
+				name: 'Font_normal'
+		}, function(ret, err) {
+				$('html').css("font-size","125%");
+		});
+		api.addEventListener({
+				name: 'Font_big'
+		}, function(ret, err) {
+				$('html').css("font-size","156.25%");
+		});
+		$('.det').on('click',function(){
+			api.sendEvent({
+			    name: 'Hide_change',
+			});
+		});
+		$('.week').on('click',function(){
+			$(this).addClass('orange');
+			$('.mouth').removeClass('orange');
+			$('.classify').toggleClass('hide');
+		});
+		$('.mouth').on('click',function(){
+			$(this).addClass('orange');
+			$('.week').removeClass('orange');
+			$('.classify').toggleClass('hide');
+		});
+
+	};
+	function closeWin(){
+		$('#left').on("click",function(){
+			api.closeWin();
+		})
+	}
+</script>
+</html>

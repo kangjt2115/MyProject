@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/active.css" />
+    <style>
+    .Active-tab{
+        margin:0 auto;
+        width:1.5rem;
+        height: 1.5rem;
+    }
+    .Active-tab1{
+        margin:0 auto;
+        width:1.4rem;
+        height: 1.4rem;
+    }
+    .Active-tab2{
+        margin:0 auto;
+        width:1.3rem;
+        height: 1.3rem;
+    }
+    .Active-tab-item{
+    	border-color: #00ccff;
+        background: #f5f5f5;
+    	border-radius: 0.1rem;
+        border: 0;
+        padding: 0.2rem;
+    }
+    .Active-tab-span{
+    	display:block;
+    	line-height:1rem;
+    	height:1rem;
+		font-size:0.5rem;
+	}
+	
+	.Active-addbox{
+		background:#00ccff;
+		border-radius:3rem;
+		width:2.5rem;
+		height:2.5rem;
+		overflow:hidden;
+		position:fixed;
+        bottom:3rem;
+        right:0.5rem;
+	}
+	.Active-add{
+		width:1.5rem;
+        height: 1.5rem;
+        position:fixed;
+        right: 1rem;
+        bottom: 3.5rem;
+        
+       
+    }
+   
+    .Active-superscript{
+      	width:3rem;
+      	height: 3rem;
+      	float:left;
+      	
+    }
+    .Active-img{
+    	height: 8rem;
+    }
+    .Active-p{
+    	font-size:0.5rem;
+    	
+    }
+    body{
+    position:relative;
+    }
+    
+	.Active-tab-span{
+		font-size:0.5rem;
+	}
+    
+	#header{
+	position:fixed;
+	top: 0;
+	
+	}
+    </style>
+   
+</head>
+<body>
+    <!--头部-->
+    
+    	<header class="aui-bar aui-bar-nav"  style="background: #00ccff;z-index: 100;"id="header">
+    	    <div class="aui-title">榜单</div>
+    	    <a class="aui-pull-right aui-btn" >
+    	        <span class="aui-iconfont aui-icon-search"onclick="search()"></span>
+    	    </a>
+    	</header>
+    	 <div class="yl"></div>
+
+         <!--  /*....轮播图.....*/-->
+    	<div id="aui-slide3" >
+    	    <div class="aui-slide-wrap" >
+    	        <div class="aui-slide-node">
+    	            <img src="../image/Active-slide1.jpg" />
+    	        </div>
+    	        <div class="aui-slide-node">
+    	            <img src="../image/Active-slide2.png" />
+    	        </div>
+    	        <div class="aui-slide-node">
+    	            <img src="../image/Active-slide3.jpg" />
+    	        </div>
+    	    </div>
+    	    <div class="aui-slide-page-wrap"><!--分页容器--></div>
+    	</div>
+    	
+    	<!--/*...中部导航...*/-->
+    	<!--<div class="aui-hr"></div>-->
+    	<div style="padding-top: 0.15rem;height: 3rem;">
+    	    <div class="aui-bar-btn-item Active-tab-item" onclick="todongtai()">
+    		    <img src="../image/Active-act.png" alt=""  class="Active-tab1"/>
+    		    <span class="Active-tab-span">动态</span>
+    	    </div>
+    	    <div class="aui-bar-btn-item Active-tab-item" onclick="toseach()">
+    		    <img src="../image/Active-round.png" alt="" class="Active-tab" >
+    		    <span class="Active-tab-span">筛选</span>
+    	    </div>
+    	    <div class="aui-bar-btn-item Active-tab-item" onclick="tohot()">
+    		    <img src="../image/Active-hot.png" alt="" class="Active-tab2" />
+    		    <span class="Active-tab-span">热门</span>
+    	    </div>
+        </div>
+    
+    
+       	<div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="Active-addbox" onclick="api.openWin({
+	        name: 'add_header',
+	        url: './add_header.html'
+        });"><img src="../image/Active-add.png" alt="" / class="Active-add"></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-slide.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+       /*....轮播图.....*/
+      var slide3 = new auiSlide({
+        container:document.getElementById("aui-slide3"),
+        // "width":300,
+        "height":200,
+        "speed":500,
+        "autoPlay": 3000, //自动播放
+        "loop":true,
+        "pageShow":true,
+        "pageStyle":'line',
+        'dotPosition':'center'
+    })
+    apiready = function(){
+    	
+//  var x = api.pageParam.x;
+    	var header=$api.byId('header');$api.fixStatusBar(header);
+    	var headerH=$api.offset(header).h;
+    $("#header").css("z-index","1000000000");
+    $(".yl").css("height",headerH);
+    	
+//  	api.openFrame({
+//  	    name: 'Active_frame',
+//  	    url: './Active_frame.html',
+//  	    rect: {
+//  	        x: 0,
+//  	        y: topH,
+//  	        w: "auto",
+//  	        h: "auto"
+//  	    },
+//  	    pageParam: {
+//  	        name: 'test'
+//  	    },
+//  	    bounces: true,
+//  	   
+//  	});
+//      
+    }
+        
+    function search(){
+   		api.openWin({
+            name: 'Active-search_header',
+            url: './Active-search_header.html'
+        });
+//      api.openFrame({
+//	        name: 'Active-search_header',
+//          url: './Active-search_header.html',
+//	        rect: {
+//		        x:0,
+//		        y:0,
+//		        w:'auto',
+//		        h:'auto'
+//	        }
+//      });
+    }
+    function todongtai(){
+    api.openWin({
+	    name: 'Active-act_head',
+	    url: './Active-act_head.html'
+    });
+    }
+    function toseach(){
+    
+    api.openFrame({
+	        name: 'Active_Round',
+	        url: 'Active_Round.html',
+	        rect:{
+                x:0,
+                y:0,
+                w:'auto',
+                h:'auto'
+            },
+            bounces: false,
+            delay:200
+        });
+    }
+    function tohot(){
+    api.openWin({
+	    name: 'Active-hot_header',
+	    url: './Active-hot_header.html'
+    });
+    }
+</script>
+</html>

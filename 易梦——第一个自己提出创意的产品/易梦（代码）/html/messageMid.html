@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    	body{
+    		
+    	}
+        #header{
+            background: #00ccff;
+        }
+    </style>
+</head>
+<body>
+    
+	<div class="aui-tab" id="tab">
+	    <div class="aui-tab-item aui-active" tapmode="aui-active" onclick="MenuIndex(0)">群消息</div>
+	    <div class="aui-tab-item" tapmode="aui-active" onclick="MenuIndex(1)"><div></div>系统消息</div>
+	    <div class="aui-tab-item" tapmode="aui-active" onclick="MenuIndex(2)">与我有关</div>
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+    
+    	var x = api.pageParam.x;
+    	var y=api.pageParam.y;
+        var tab=$api.byId('tab');
+//      $api.fixStatusBar(header);
+        var tabH=$api.offset(tab).h;
+        menus=$api.domAll(tab, '.aui-tab-item');
+        var frames=[{
+                name:'Message-GroupMessage',
+                url:'Message-GroupMessage.html'
+            },{
+                name:'Message-SystemMessage',
+                url:'Message-SystemMessage.html'
+            },{
+                name:'Message-RelatedToMe',
+                url:'Message-RelatedToMe.html'
+            }]
+       api.openFrameGroup ({
+            name: 'messageFrameGroup',
+            scrollEnabled: true,
+            rect: {
+                 x: 0, 
+                 y: y+tabH, 
+                 w: 'auto', 
+                 h:x-tabH,
+            },
+            index: 0,
+            frames: frames
+        }, function(ret, err){
+           MenuSelected(ret.index);
+        });
+        
+	};
+    var menus;
+    function MenuIndex(index_){
+        MenuSelected(index_);
+        api.setFrameGroupIndex({
+            name:'messageFrameGroup',
+            index:index_,
+            scroll:true
+        });
+    }
+    function MenuSelected(index_){
+        for(var i=0;i<menus.length;i++){
+            if (index_==i) {
+                $api.addCls(menus[i], 'aui-active');
+            }else{
+                $api.removeCls(menus[i], 'aui-active');
+            }
+        }
+    } 
+</script>
+</html>

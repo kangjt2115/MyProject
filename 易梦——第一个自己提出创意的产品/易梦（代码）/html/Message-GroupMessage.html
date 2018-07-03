@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    	html{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	body{
+    		width: 100%;
+    		height: 100%;
+    		background: #f5f5f5;
+    	}
+    </style>
+</head>
+<body>
+	<!--<div class="aui-hr"></div>-->
+		
+			<div class="aui-card-list-content">
+	            <ul class="aui-list aui-media-list">
+	                <li class="aui-list-item aui-list-item-middle" onclick="toChat()">
+	                    <div class="aui-media-list-item-inner">
+	                        <div class="aui-list-item-media">
+	                            <img src="../image/siji.jpg" class="aui-img-round aui-list-img-sm">
+	                        </div>
+	                        <div class="aui-list-item-inner">
+	                            <div class="aui-list-item-text">
+	                                <div class="aui-list-item-title aui-font-size-16">四级交流研讨群</div>
+	                                <div class="aui-list-item-right">07:20</div>
+	                            </div>
+	                            <div class="aui-list-item-text">
+	                                李波键：开完会研究一下吧
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="aui-list-item aui-list-item-middle" onclick="toChat1()">
+	                    <div class="aui-media-list-item-inner">
+	                        <div class="aui-list-item-media">
+	                            <img src="../image/chenpao.gif" class="aui-img-round aui-list-img-sm">
+	                        </div>
+	                        <div class="aui-list-item-inner">
+	                            <div class="aui-list-item-text">
+	                                <div class="aui-list-item-title aui-font-size-16">吉大晨跑互动</div>
+	                                <div class="aui-list-item-right">19:46</div>
+	                            </div>
+	                            <div class="aui-list-item-text">
+	                                李晓霞：明天有约一起晨跑的小伙伴吗
+	                            </div>
+	                        </div>
+	                    </div>
+	                </li>
+	            </ul>
+	        </div>
+	        
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+	function toChat(){
+		api.openWin({
+		    name: 'Message-GroupChatHead',
+		    url: './Message-GroupChatHead.html',
+		    pageParam: {
+		        name: 'test'
+		    }
+		});
+	}
+	function toChat1(){
+		api.openWin({
+		    name: 'Message-GroupChatHead1',
+		    url: './Message-GroupChatHead1.html',
+		    pageParam: {
+		        name: 'test'
+		    }
+		});
+	}
+</script>
+</html>

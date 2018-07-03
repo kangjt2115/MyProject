@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left"></span>
+        </div>
+        <div class="aui-title titlecol">考核申请</div>
+    </header>
+    <div class="tag">未处理：</div>
+    <div class="list_frame">
+      <span class="">张浩哲的考核申请</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame">
+      <span class="">白雪峰的考核申请</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="tag">已处理：</div>
+    <div class="list_frame">
+      <span class="">魏泽毅的考核申请</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame">
+      <span class="">朱陈超的考核申请</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame">
+      <span class="">袁琳的考核申请</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+
+    };
+</script>
+</html>

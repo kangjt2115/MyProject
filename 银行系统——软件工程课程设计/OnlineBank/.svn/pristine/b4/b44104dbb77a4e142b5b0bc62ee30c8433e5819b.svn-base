@@ -1,0 +1,15 @@
+ZCC.component.classinfo=(function($,window,undefined){
+	//1.构造函数
+	var obj = function(option){	
+		this.init(option);		
+	}						
+	//2.方法
+	obj.prototype={
+		constructor:obj,
+		init:function(option){
+
+		}
+	}
+
+	return obj;
+})(jQuery,this);

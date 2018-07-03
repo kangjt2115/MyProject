@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">时段</span>
+      <span class="aui-iconfont right">08：00——09：00</span>
+    </div>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">白雪峰</span>
+      <span class="aui-iconfont aui-icon-right right"><img class="kjt" src="../image/tel.png" alt="" style="float: left;width: 1.2rem;height: 1.2rem;margin-top: 0.65rem;margin-right: 0.65rem;" tapmode/></span>
+    </div>
+    <div class="list_frame">
+      <span class="">朱陈超</span>
+      <span class="aui-iconfont aui-icon-right right"><img class="kjt" src="../image/tel.png" alt="" style="float: left;width: 1.2rem;height: 1.2rem;margin-top: 0.65rem;margin-right: 0.65rem;"/></span>
+    </div>
+    <div class="list_frame">
+      <span class="">袁琳</span>
+      <span class="aui-iconfont aui-icon-right right"><img class="kjt" src="../image/tel.png" alt="" style="float: left;width: 1.2rem;height: 1.2rem;margin-top: 0.65rem;margin-right: 0.65rem;"/></span>
+    </div>
+    <div class="list_frame">
+      <span class="">丁鹏飞</span>
+      <span class="aui-iconfont aui-icon-right right"><img class="kjt" src="../image/tel.png" alt="" style="float: left;width: 1.2rem;height: 1.2rem;margin-top: 0.65rem;margin-right: 0.65rem;"/></span>
+    </div>
+    <div class="list_frame">
+      <span class="">蔡春锡</span>
+      <span class="aui-iconfont aui-icon-right right"><img class="kjt" src="../image/tel.png" alt="" style="float: left;width: 1.2rem;height: 1.2rem;margin-top: 0.65rem;margin-right: 0.65rem;"/></span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-dialog.js" ></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+    };
+    $('.list_frame').on('click',function(){
+          api.openWin({
+            name: 'duty',
+            url: './duty.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    });
+    
+    var dialog = new auiDialog({});
+    $('.kjt').on('click',function(){
+          event.stopPropagation(); 
+          dialog.alert({
+                    title:"是否拨打",
+                    msg:"18843019528",
+                    buttons:['取消','拨号']
+                },function(ret){
+                    // console.log(ret)
+                })
+    });
+</script>
+</html>

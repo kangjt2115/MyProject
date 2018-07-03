@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/employeeTrain_post.css" />
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left"></span>
+        </div>
+        <div class="aui-title titlecol">员工培训</div>
+    </header>
+    <div class="jiange"></div>
+
+    <!-- 列表 -->
+    <div class="list_frame" onclick="goDetail()">
+      <span class="titk">服务员</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="goDetail()">
+      <span class="titk">后厨</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="goDetail()">
+      <span class="titk">保洁员</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="goDetail()">
+      <span class="titk">收银员</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      closeWin();
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+    };
+    api.addEventListener({
+        name: 'Font_normal'
+    }, function(ret, err) {
+        $('html').css("font-size","125%");
+    });
+    api.addEventListener({
+        name: 'Font_big'
+    }, function(ret, err) {
+        $('html').css("font-size","156.25%");
+    });
+    function  goDetail(){
+      api.openWin({
+          name: 'employeeTrain_details_header',
+          url: './employeeTrain_details_header.html',
+          pageParam: {
+              name: 'test'
+          }
+      });
+    }
+    function closeWin(){
+  		$('#left').on("click",function(){
+  			api.closeWin();
+  		})
+  	}
+</script>
+
+</html>

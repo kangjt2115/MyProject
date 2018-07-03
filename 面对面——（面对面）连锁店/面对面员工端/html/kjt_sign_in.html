@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css">
+    <style type="text/css">
+      html{
+        width: 100%;
+        height: 100%;
+      }
+      body{
+        background-color: #fff9f9;
+        width: 100%;
+        height: 100%;
+        padding: 35% 7% 32%;
+        position: relative;
+      }
+      .log_in{
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 5rem 2rem;
+      }
+      .tag_p{
+        font-size: 0.7rem;
+        color: #333;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      input{
+        width: 100%;
+        font-size: 0.6rem;
+        color: #999;
+        padding: 0.3rem 0.3rem;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      form{
+        margin-top: 1.5rem;
+      }
+      .log_btn{
+        position: absolute;
+        width: 11rem;
+        height: 2rem;
+        left: 50%;
+        top: 82%;
+        margin-left: -5.5rem;
+        margin-top: -1rem;
+        background-color: #fda340;
+        border-radius: 0.9rem;
+        line-height: 2rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.8rem;
+      }
+      .logo{
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        left: 50%;
+        top: 21%;
+        margin-left: -5rem;
+        margin-top: -5rem;
+      }
+    </style>
+</head>
+<body>
+    <img src="../image/logo.png" class="logo">
+    <div class="log_in">
+      <form action="" method="">
+          <p class="tag_p">手机号</p>
+          <input type="" name="" placeholder="请输入手机号">
+          <p class="tag_p">密码</p>
+          <input type="" name="" placeholder="请输入密码">
+      </form>
+      <div class="log_btn">登录</div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      logOut();
+    };
+    function logOut(){
+			$('.log_btn').on('click',function(){
+				api.openWin({
+				    name: 'main',
+				    url: './main.html',
+				    pageParam: {
+				        name: 'test'
+				    }
+				});
+
+			})
+		}
+</script>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    	html{
+    		background: #f5f5f5;
+        }
+        .bigbox{
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            height: 10rem;
+            background: #fff;
+            overflow: hidden;
+
+        }
+        .bigbox1{
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            height: 9.5rem;
+            background: #fff;
+            overflow: hidden;
+            
+        }
+        .head{
+            height: 3.2rem;
+            overflow: hidden;
+
+        }
+        .img1{
+            width: 2.8rem;
+            height: 2.8rem;
+            float: left;
+        }
+        .img1 img{
+            width: 2.8rem;
+            height: 2.8rem;
+
+        }
+        .right1{
+            float: left;
+            margin-left: 1rem;
+        }
+        .title1{
+            margin-top:0.2px;
+            font-size: 0.8rem; 
+        }
+        .text1{
+            font-size: 0.6rem;
+             display: block;
+            float: left;
+        }
+        .text2{
+
+            font-size: 0.6rem;
+            display: block;
+            float: right;
+            margin-top: 2rem;
+        }
+        .text3{
+            margin-top: 0.75rem;
+            overflow: hidden;
+        }
+        .mid{
+            width: 94%;
+            height: 4rem;
+            margin-top: 0.6rem;
+            overflow: hidden;
+            float: right;
+            background: #f2f2f2;
+        }
+        .img2{
+            width: 4rem;
+            height: 4rem;
+            float: left;
+        }
+        .img2 img{
+            width: 4rem;
+            height: 4rem;
+           
+        }
+        
+        .text4{
+            font-size: 0.65rem;
+            display: block;
+            margin-left: 4.5rem;
+            margin-top: 0.5rem;
+        }
+        .foot{
+            margin-top: 0.2rem;
+            margin-left: 2.0rem;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="head">
+            <div class="img1">
+                <img src="../image/kkk.jpg">
+            </div>
+            <div class="right1">
+                <span class="title1">15 机械 湖南郴州周文轩</span>
+                <div class="text3">
+                    <p class="text1">&nbsp;&nbsp;昨天22:11</p>
+                </div>
+            </div>
+            <p class="text2">回复</p>
+
+        </div>
+        <div class="mid">
+            <div class="img2">
+                <img src="../image/siji.jpg">
+            </div>
+            <p class="text4">黑色轮廓泛白记忆：来赞我吧，一个赞一公里，我不怕 0.0</p>
+        </div>
+        <span class="foot">哈哈。。。。真厉害0.0</span>
+    </div>
+    <div class="bigbox1">
+        <div class="head">
+            <div class="img1">
+                <img src="../image/dd.jpg">
+            </div>
+            <div class="right1">
+                <span class="title1">16 哲社 大学城顾丹宁</span>
+                <div class="text3">
+                    <p class="text1">&nbsp;&nbsp;昨天22:11</p>
+                </div>
+            </div>
+            <p class="text2">报名了我的招募令</p>
+        </div>
+        <div class="mid">
+            <div class="img2">
+                <img src="../image/bb.jpeg">
+            </div>
+            <div class="right2">
+                <p class="text4">夏天要到了，有没有和我一起约每天晨跑的，一起能跑15圈以上的，腿长的小姐姐优先。。。</p>
+            </div>
+        </div>
+        
+    </div>
+	 
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+</script>
+</html>

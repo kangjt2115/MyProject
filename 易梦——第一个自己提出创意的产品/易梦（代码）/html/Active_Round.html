@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>筛选</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    html {width: 100%;height: 100%;background:transparent;}
+		body {background: rgba(0,0,0,0.4);width: 100%;height: 100%;}
+        .a{
+            width: 10%;
+            height:100%;
+            float: left;
+            background:#ccc;
+            opacity: 0;
+        }
+    	.form1{
+    	display:block;
+    	  width:90%;
+          height:100%;
+          float: right;
+          background-color:#c7c7c7;
+          opacity: 0.9;
+    	}
+        .big-box1{
+            height:2rem;
+            line-height:2rem;
+            width:90%;
+            margin-left: 0.75rem;
+            background: #fcf8f5;
+            border-radius: 0.4rem;
+        }
+        .name1{
+            margin-top:0.4rem;
+            margin-left: 1rem;
+        }
+        .radio1{
+            float: left;
+            margin-right: 0.5rem;
+            margin-top: 0.6rem;
+        }
+        .big-box2{
+            height:2rem;
+            width:90%;
+            margin-left: 0.75rem;
+            background: #fcf8f5;
+            border-radius: 0.4rem;
+            padding-top: 0.1rem;
+            margin-top: 0.2rem;
+        }
+        .name2{
+            margin-top:0.4rem;
+            margin-left: 0.5rem;
+        }
+        .radio2{
+            float: right;
+            margin-right: 0.5rem;
+            margin-top: 0.6rem;
+        }
+        .big-box3{
+            height:2rem;
+            width:90%;
+            margin-left: 0.75rem;
+            background: #fcf8f5;
+            border-radius: 0.4rem;
+            padding-top: 0.1rem;
+            margin-top: 0.2rem;
+            padding-top:0.8rem;
+        }
+        .name3{
+           margin:-0.2rem 0rem auto 0.4rem;
+           float:left;
+        }
+        .png3{
+            float: left;
+            margin:-0.2rem 0 auto 0.2rem;
+            width:0.8rem;
+            height:0.8rem;
+        }
+        .big-box4{
+            height:6rem;
+            width:90%;
+            margin-left: 0.75rem;
+            background: #fcf8f5;
+            border-radius: 0.4rem;
+            padding-top: 0.1rem;
+            margin-top: 0.2rem;
+        }
+        .name4{
+           margin:0.2rem 0rem auto 0.4rem;
+           float:left;
+        }
+        .select1{
+            width:3rem;
+            height: 1rem;
+            border:1px solid #D7D7D7;
+            margin-top: 0.3rem;
+            margin-right: 1rem;
+            line-height:1rem;
+            text-align:center;
+            float: right;
+        }      
+        .box1{
+            height: 2rem;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .box2{
+            height: 2rem;
+            width: 100%;
+            margin-top: 0rem;
+        }
+        .info1{
+            height:2rem;
+            width: 4rem;
+            background: #00ccff;
+            font-size: 0.8rem;
+            text-align:center;
+            line-height:2rem;
+            margin:0 2rem;
+        }
+        .info2{
+            height:2rem;
+            width: 4rem;
+            background: #00ccff;
+            font-size: 0.8rem;
+            text-align:center;
+            line-height:2rem;
+            float: right;
+            margin-right: 2rem;
+        }
+        .big-box5{
+            height:auto;
+            width:100%;
+            margin-top: 8rem;
+        }
+        .formp{
+            color:#999999;
+            font-size:0.6rem;
+            margin:0.5rem 0 0 0.5rem;
+        }
+        .formselect{
+            margin-bottom: 0.3rem;
+            margin-top:0.5rem;
+        }
+        .hot{
+            height:2rem;
+            width:90%;
+            margin-left: 0.75rem;
+            background: #fcf8f5;
+            border-radius: 0.4rem;
+            margin-top: 0.2rem;
+            padding-left:0.5rem;
+            line-height:2rem;
+        }
+        .col{
+            height:2rem;
+            width:90%;
+            margin-left: 0.75rem;
+            background: #fcf8f5;
+            border-radius: 0.4rem;
+            margin-top: 0.2rem;
+           line-height:2rem;
+            padding-left:0.5rem;
+        }
+        .hot_img1{
+            width:0.8rem;
+            height:0.8rem;
+            float: right;
+            margin:0.7rem 1rem auto auto;
+            /*visibility: hidden;*/
+           display: none;
+        }
+        .hot_img2{
+            width:0.8rem;
+            height:0.8rem;
+            float: right;
+            margin:0.7rem 1rem auto auto;
+            /*visibility: hidden;*/
+           display:none;
+        }
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div class="a" onclick="closeshare()"></div>
+
+<form method="post" name="form1" class="form1">
+	  <p class="formp formselect">筛选</p>
+      <!--<div class="aui-list-item-inner big-box1">
+          <div class="aui-list-item-input">
+              <select>
+                  <option>综合排序</option>
+                  <option>热门排序</option>
+              </select>
+          </div>                            
+     </div>-->
+     <div class="hot" onclick="fnlog1()">热门排序
+       <div class="hot_img1"><img src="../image/s_yes.png" /></div>
+     </div>
+     <div class="col" onclick="fnlog2()">综合排序
+        <div class="hot_img2"><img src="../image/s_yes.png" /></div>
+     </div>
+      <p class="formp">地点</p>
+      <li class="aui-list-item">
+      <div class="aui-list-item-inner big-box3">
+           <img src="../image/position.png" style="float:left;" class="png3">
+           <div class="aui-list-item-label name3">输入地点：</div>
+           <input type="text" placeholder="输入你的地点" style="margin-top:-0.8rem;padding:0;font-size: 0.7rem;float:left;width: 50%;">              
+      </div>
+      </li>
+      <p class="formp">时间</p>
+      <div class="aui-list-item-inner big-box4">
+        <span class="name4">您有空的时间是：</span>
+        <div class="select1"><span>七月</span></div> 
+        <div class="box1" onclick="opendata()">
+            <span style="float: left;margin-left: 1rem;color: #00CCFF">从</span>
+            <span  style="float: left;margin-left: 1rem">14日</span>
+            <span  style="float: left;margin-left: 1rem">14时</span>
+             <span style="float: left;margin-left: 1rem">30分</span>
+        </div>
+        <div class="box2"  onclick="opendata()" >
+            <span style="float: left;margin-left: 1rem;color: #00CCFF">终</span>
+            <span  style="float: left;margin-left: 1rem">15日</span>
+             <span  style="float: left;margin-left: 1rem">15时</span>
+             
+            <span style="float: left;margin-left: 1rem">30分</span>       
+        </div>
+    </div>    
+        <div class="big-box5">
+           <input class="aui-btn aui-btn-info info1" type="button" value="确定" onclick="fnlogin()">
+           <input class="aui-btn aui-btn-info info2" type="reset" value="重置">
+        </div>   
+</form>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+   function opendata(){
+      api.openFrame({
+	      name: 'Active-search-data',
+	      url: './Active-search-data.html',
+	      rect: {
+		      x:0,
+		      y:0,
+		      w:'auto',
+		      h:'auto'
+	      }
+      });
+   }
+   function fnlogin(){
+      api.openWin({
+	      name: 'Select_result_head',
+	      url: 'Select_result_head.html'
+      });
+   }
+   function fnlog1(){
+
+        document.getElementsByClassName('hot_img1')[0].style.display="block";
+        document.getElementsByClassName('hot_img2')[0].style.display="none";
+ }
+ function fnlog2(){
+        document.getElementsByClassName('hot_img1')[0].style.display="none";
+        document.getElementsByClassName('hot_img2')[0].style.display="block";
+ }
+	 function closeshare(){
+   	api.closeFrame({
+    name: 'Active_Round'
+});
+   }
+    apiready = function(){
+    	
+//  var x = api.pageParam.x;
+    	var header=$api.byId('header');$api.fixStatusBar(header);
+    	var headerH=$api.offset(header).h;
+    	}
+</script>
+</html>

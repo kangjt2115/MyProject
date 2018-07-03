@@ -1,0 +1,63 @@
+<style type="text/css">
+	.KJT-mt-20{
+		margin-top: 20px;
+	}
+</style>
+<div class="row">
+	<div class="container-fluid" >
+		<ol class="breadcrumb">
+		  <li><a href="#signCheck">签到查看</a></li>
+		  <li><a class="toPeople">查看签到结果</a></li>
+		</ol>
+	</div>
+</div>
+<div class="kjt_table">
+	<div class="row" id="KJT_suoyou">
+		<div class="container-fluid" >
+			<div class="btn-group KJT-blank" role="group">
+				  <a class="toPeople"><button type="button" class="btn btn-primary KJTbtn5">逐条查看</button></a>
+				  <a class="toClass"><button type="button" class="btn btn-default KJTbtn6">按班查看</button></a>
+			</div>
+		</div>
+	</div>
+	<div class="row KJT-mt-20">
+		<div class="container-fluid">
+	        <table class="table table-bordered table-hover">
+	            <tbody>
+	            	<tr class="active">
+	            		<th width="3%">序号</th>
+		                <th width="10%">学号</th>
+		                <th width="13%">姓名</th>
+		                <th width="24%">签到时间</th>
+		                <th width="3%">序号</th>
+		                <th width="10%">学号</th>
+		                <th width="13%">姓名</th>
+		                <th width="24%">签到时间</th>
+		            </tr>
+	            </tbody>
+	            <tbody id="arcListView">
+	            
+	             </tbody>
+	        </table>
+	        
+	    </div>
+	</div>
+</div>
+<div class="row">
+	<div class="container-fluid">
+		<ul class="pagination" id="ZCC-pager">
+
+	    </ul>
+	</div>
+</div>
+
+<script src="components/signCheck/checkpeople.js"></script>
+<script type="text/javascript">
+	new KJT.component.signCheck_checkpeople({
+		$TableContentWrapper:$("#arcListView"),
+		$Pager:$("#ZCC-pager"),
+		$toClass:$(".toClass"),
+		$toPeople:$(".toPeople"),
+		$kjt_table:$(".kjt_table"),
+	});
+</script>

@@ -1,0 +1,52 @@
+<style type="text/css">
+	.KJT-blank{
+		margin-left: 15px;
+	}
+	.KJT-mt-10{
+		margin-top: 10px;
+	}
+	.KJT-rt{
+		float: right;
+	}
+	
+</style>
+
+<div class="row">
+	<div class="container-fluid" >
+		<ol class="breadcrumb">
+			<li><a href="#signCheck">签到查看</a></li>
+		 	<li><a class="toClass">查看签到结果</a></li>
+		 	<li><a class="toCertainClass">查看班级签到情况</a></li>
+		</ol>
+	</div>
+</div>
+<div class="row KJT-mt-20">
+	<div class="container-fluid">
+        <table class="table table-bordered table-hover kjt_table">
+            <tbody>
+            	<tr class="active">
+            		<th width="3%">序号</th>
+	                <th width="10%">学号</th>
+	                <th width="13%">姓名</th>
+	                <th width="24%">签到时间</th>
+	                <th width="3%">序号</th>
+	                <th width="10%">学号</th>
+	                <th width="13%">姓名</th>
+	                <th width="24%">签到时间</th>
+	            </tr>
+            </tbody>
+            <tbody id="arcListView">
+            
+             </tbody>
+        </table>
+        
+    </div>
+</div>
+<script src="components/signCheck/certainclass.js"></script>
+<script type="text/javascript">
+	new KJT.component.signCheck_certainclass({
+		$TableContentWrapper:$("#arcListView"),
+		$toClass:$(".toClass"),
+		$toCertainClass:$(".toCertainClass"),
+	});
+</script>

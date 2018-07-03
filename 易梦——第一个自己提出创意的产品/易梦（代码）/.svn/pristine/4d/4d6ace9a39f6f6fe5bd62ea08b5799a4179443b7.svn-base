@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		body{
+			background: #fff;
+		}
+        .aui-chat .marbo{
+            margin-top: 0.5rem;
+        }
+	</style>
+</head>
+<body>
+   	
+<section class="aui-chat">
+    <div class="aui-chat-item aui-chat-left marbo">
+        <div class="aui-chat-media">
+            <img src="../image/xiaomishu.png" />
+        </div>
+        <div class="aui-chat-inner">
+            <div class="aui-chat-name aui-font-size-14">系统小秘书</div>
+            <div class="aui-chat-content">
+                <div class="aui-chat-arrow"></div>
+                您好！我是系统小秘书
+            </div>
+        </div>
+    </div>
+    <div class="aui-chat-item aui-chat-left marbo">
+        <div class="aui-chat-media">
+            <img src="../image/xiaomishu.png" />
+        </div>
+        <div class="aui-chat-inner">
+            <div class="aui-chat-name aui-font-size-14">系统小秘书</div>
+            <div class="aui-chat-content">
+                <div class="aui-chat-arrow"></div>
+                亲爱的用户，您的信誉积分增加5分!
+            </div>
+        </div>
+        <div class="aui-chat-media">
+            <img src="../image/xiaomishu.png" />
+        </div>
+        <div class="aui-chat-inner">
+            <div class="aui-chat-name aui-font-size-14">系统小秘书</div>
+            <div class="aui-chat-content">
+                <div class="aui-chat-arrow"></div>
+                您好！我是系统小秘书
+            </div>
+        </div>
+    </div>
+    <div class="aui-chat-item aui-chat-left marbo">
+        <div class="aui-chat-media">
+            <img src="../image/xiaomishu.png" />
+        </div>
+        <div class="aui-chat-inner">
+            <div class="aui-chat-name aui-font-size-14">系统小秘书</div>
+            <div class="aui-chat-content">
+                <div class="aui-chat-arrow"></div>
+                亲爱的用户，您的信誉积分增加5分!
+            </div>
+        </div>
+        <div class="aui-chat-media">
+            <img src="../image/xiaomishu.png" />
+        </div>
+        <div class="aui-chat-inner">
+            <div class="aui-chat-name aui-font-size-14">系统小秘书</div>
+            <div class="aui-chat-content">
+                <div class="aui-chat-arrow"></div>
+                您好！我是系统小秘书
+            </div>
+        </div>
+    </div>
+    <div class="aui-chat-item aui-chat-left marbo">
+        <div class="aui-chat-media">
+            <img src="../image/xiaomishu.png" />
+        </div>
+        <div class="aui-chat-inner">
+            <div class="aui-chat-name aui-font-size-14">系统小秘书</div>
+            <div class="aui-chat-content">
+                <div class="aui-chat-arrow"></div>
+                亲爱的用户，您的信誉积分增加5分!
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    
+</script>
+</html>

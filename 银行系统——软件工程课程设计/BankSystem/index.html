@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>银行管理系统</title>
+		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/layui.css">
+		<link rel="stylesheet" href="assets/css/app.css" />
+		<link rel="stylesheet" href="components/infomation/index.css" />
+	    <link rel="stylesheet" href="assets/css/replyArticle.css" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	    <style type="text/css">
+	    	img{width: 100%;height: 100%}
+	    	pre{border: none;background: none}
+	    	*{
+	    		-moz-box-sizing: border-box; /*Firefox3.5+*/
+				-webkit-box-sizing: border-box; /*Safari3.2+*/
+				-o-box-sizing: border-box; /*Opera9.6*/
+				-ms-box-sizing: border-box; /*IE8*/
+				box-sizing: border-box; 
+			}
+			html{font-size: 20px;word-wrap : break-word ;}
+			.trumbowyg-box, .editor{margin:0;width: 100%}
+			.webuploader-pick{border: 0;background: none;padding: 0;color: #555;margin: 0;height: 100%;width: 100%;display: inline-block;}
+			.layui-side-scroll>ul>li>dl>dd>a>img{width: auto;height: auto;padding-left: 5px;}
+			.layui-side-scroll>ul>li>a>img{width: auto;height: auto;padding-left: 5px;}
+
+	    </style>
+	</head>
+	<body class="layui-layout-body" style="visibility:hidden;">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">银行管理系统</div>
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item" id="outBtn">
+						<a>安全退出</a>
+					</li>
+				</ul>
+			</div>
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<ul class="layui-nav layui-nav-tree" id="layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+				          <a class="selectAccount" href="#selectAccount">账户选择</a>
+				        </li>
+				        <li class="layui-nav-item layui-nav-itemed">
+				          <a>核心数据</a>
+				          <dl class="layui-nav-child">
+				            <dd><a href="#depositRate">储蓄利率</a></dd>
+				            <dd><a href="#loanRate">贷款利率</a></dd>
+				            <dd><a href="#plan" class="KJT_manager">修改计划</a></dd>
+				          </dl>
+				        </li>
+				        <li class="layui-nav-item layui-nav-itemed">
+				          <a>用户管理</a>
+				          <dl class="layui-nav-child">
+				            <dd><a href="#userManage" class="KJT_manager">管理用户</a></dd>
+				            <dd><a href="#modifyPassword">修改密码</a></dd>
+				          </dl>
+				        </li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="layui-body">
+				<div  class="main">
+					<div class="layui-main" id="view-wrapper" style="padding:20px 0 ">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="assets/js/jquery-1.11.3.min.js"></script>
+		<script src="assets/js/sha1.min.js"></script>	
+		<script src="assets/js/namespace.js"></script>
+		<script src="assets/js/cookie.js"></script>
+	    <script src="assets/js/common.js"></script>
+	    <script src="assets/layui.all.js"></script>
+	    <script src="assets/js/getComponentTemplate.js"></script>
+	    <script src="assets/js/doT.js"></script>
+	    <script src="assets/js/dom_append.js"></script>
+	    <script src="assets/js/bootstrap.min.js"></script>
+		<script src="components/infomation/index.js"></script>
+
+		<!-- 页面器 -->
+		<script>
+			KJT.component.KJT_index=(function($){
+    			// 获取cookie，判断是否登录
+	    		var user = JZY.util.Cookie.getCookie('username');
+				var cardHolder="";
+				var subAccount="";
+				var kjt_role="";
+
+		    	if (!user){
+		    		window.location.href = 'login.html';
+		    	} else {
+		    		$('body').css('visibility', 'visible');
+
+		    		$.ajax({
+					  "url": "https://d.apicloud.com/mcm/api/bankUser",
+					  "cache": false,
+					  "headers": apiHeader,
+					  "type": "GET",
+					  "data":{
+						  "filter": {
+						    "fields": ["role"],
+						    "where": { "_id": window._UserId}
+						  }
+					   }
+					}).success(function (data, status, header) {
+					  console.log(JSON.stringify(data));
+					  if(data.length>0){
+					  	var role=data[0].role;
+					  	window.role=role;
+					  	console.log(role);
+					  	if(role=="储蓄部"){
+		            		$(".selectAccount").html("储蓄业务");
+					  		
+					  		$(".KJT_manager").append('<img src="images/lock1_s.png">');
+					  		$(".KJT_manager").attr("href","#powerFail");
+					  	}else if(role=="贷款部"){
+		            		$(".selectAccount").html("贷款业务");
+					  		
+					  		$(".KJT_manager").append('<img src="images/lock1_s.png">');
+					  		$(".KJT_manager").attr("href","#powerFail");
+					  	}else if(role=="系统管理员"){
+					  		// $(".KJT_dnone").css("display","none");
+		            		$(".selectAccount").html("储蓄贷款业务");
+					  	}
+
+					  }
+					}).fail(function (header, status, errorThrown) {
+					});
+		    		//ZCC_JQManager
+
+		    		//ZCC_Manager
+		    	}
+	    	
+		    	// 绑定退出事件
+		    	$('#outBtn').on('click.xdd', function(ev){
+		    		ev.stopPropagation();
+		    		JZY.util.Cookie.removeCookie('username');
+		    		window.location.href = 'login.html';
+		    	});
+    	
+				new JZY.server.getComponentTemplate({
+					$sidebarWrapper: $('#layui-nav-tree'),
+					$viewWrapper: $('#view-wrapper')
+				});
+				return kjt_role;
+			})(jQuery);
+		</script>
+
+	</body>
+</html>
+
+
+

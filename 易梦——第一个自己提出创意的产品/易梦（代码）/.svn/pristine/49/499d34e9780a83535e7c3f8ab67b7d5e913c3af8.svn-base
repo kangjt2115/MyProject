@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+        html{
+            background: #f2f2f2;
+        }
+    	#header{
+            background: #00ccff;
+        }
+        .box{
+            margin: 0.75rem;
+            padding: 0.5rem;
+            background: #fff;
+        }
+        .title{
+            font-size: 0.9rem;
+
+        }
+        .img1{
+            margin-top: 0.25rem;
+            width: 100%;
+            height: 13.5rem;
+        }
+        .title1{
+            margin-top: 0.25rem;
+            font-size: 0.8rem;
+            font-family: "微软雅黑";
+            color:  #212121;
+        }
+        .box1{
+            margin: 0.75rem;
+            padding: 0.5rem;
+            background: #fff;
+        }
+        .title0{
+            font-size: 0.6rem;
+        }
+    </style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+        <a class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left"></span>返回
+        </a>
+        <div class="aui-title">群公告</div>
+    </header>
+    <div class="box">
+        <span class="title">国庆红叶谷旅游</span>
+        <p class="title0">计科佳佳&nbsp;&nbsp;&nbsp;2016年9月30日</p>
+        <img class="img1" src="../image/hongye.jpg">
+        <p class="title1">国庆想要去红叶谷玩的找群主报名，电话18843019528，报了名的明天准备出发，明天早上7点北门集合。</p>
+    </div>
+    <div class="box1">
+        <span class="title">关于第一次聚会</span>
+        <p class="title0">计科熊猫&nbsp;&nbsp;&nbsp;2016年8月27日</p>
+        <p class="title1">聚会地点位于农博园附近的别墅，内有KTV，桌球室，麻将室，桌游棋牌室。聚会当天有几位学长学姐在轻轨站接送。</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+</script>
+</html>

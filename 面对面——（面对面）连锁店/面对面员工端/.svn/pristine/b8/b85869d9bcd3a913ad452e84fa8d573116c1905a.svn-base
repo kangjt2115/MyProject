@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css">
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <style type="text/css">
+      .content{
+        padding: 1rem 0.8rem 0.5rem;
+      }
+      .day1{
+        width: 100%;
+        height: 6.5rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.6rem;
+        border: 1px solid #fda340;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 5px #bbb;
+      }
+      .day{
+        width: 100%;
+        height: 6.5rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.6rem;
+        border: 1px solid #e6e6e6;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 5px #bbb;
+      }
+      .left{
+        float: left;
+        height: 5.5rem;
+        width: 45%;
+
+      }
+      .right{
+        float: right;
+        height: 5.5rem;
+        width: 55%;
+      }
+      .week{
+        font-size: 1.4rem;
+        color: #fda340;
+        margin-bottom: 0.55rem;
+        margin-left: 0.5rem;
+      }
+      .week1{
+        font-size: 1.4rem;
+        color: #333;
+        margin-bottom: 0.55rem;
+        margin-left: 0.5rem;
+      }
+      .date{
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 0.05rem;
+        margin-left: 0.35rem;
+      }
+      .address{
+        font-size: 0.9rem;
+        color: #333;
+      }
+      .time{
+        font-size: 1rem;
+        color: #333;
+        height: 33%;
+        padding-top: 0.2rem;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+      <div class="day1">
+        <div class="left">
+          <p class="week">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="left">
+          <p class="week1">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="left">
+          <p class="week1">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="left">
+          <p class="week1">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="left">
+          <p class="week1">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="left">
+          <p class="week1">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="left">
+          <p class="week1">周一</p>
+          <p class="date">4月28号</p>
+          <div class="address">
+            <i class="iconfont icon-wxbdingwei"></i>
+            长大店
+          </div>
+
+        </div>
+        <div class="right">
+          <p class="time">08：00—10：00</p>
+          <p class="time">09：00—11：00</p>
+          <p class="time">18：00—20：00</p>
+        </div>
+      </div>
+      
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+
+    };
+</script>
+
+</html>

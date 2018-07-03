@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+html {
+    background-color: #f2f2f2;
+}
+.btn_top {
+  text-align: center;
+  width: 100%;
+  background-color: #f2f2f2;
+  position: fixed;
+  z-index: 100;
+}
+.tag{
+	color:#656565;
+	padding-top: 5.5rem;
+	background: #f2f2f2;
+}
+.time_btn {
+  border: 1px solid #fda340;
+  color: #FDA340;
+  font-size: 20px;
+  line-height: 2rem;
+  width:45%;
+  height: 2rem;
+  background-color: #fefefe;
+}
+.active {
+  border: none;
+  font-size: 20px;
+  color: white;
+  line-height: 2rem;
+  width:45%;
+  height: 2rem;
+  background-color: #FDA340;
+}
+.time_bar {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+.time {
+  width: 10%;
+  color: #989898;
+  font-size: 14px;
+}
+.line {
+  vertical-align: middle;
+  width: 85%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+.employee_info {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 6px;
+  background-color: white;
+  width: 90%;
+  height: 3rem;
+  float: right;
+}
+.employee_info_left {
+  width:80%;
+  float:left;
+  padding-left:1rem;
+  padding-right:4.5rem;
+}
+.employee_info_right {
+  width:20%;
+  float:right;
+}
+.yingdao {
+  float: left;
+}
+.renshu {
+  float: right;
+}
+.xiangqing {
+
+}
+.right {
+
+}
+/*.btn_top {
+  padding-left: 1.25rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: auto;
+  height: auto;
+  background-color: #f2f2f2;
+  position: fixed;
+  z-index: 100;
+}
+.headercol {
+  background-color: #fefefe;
+}
+.titlecol {
+    color: black;
+    font-weight: normal;
+}
+.tag{
+	color:#656565;
+	padding: 0.75rem 0.75rem 0 0.75rem;
+	background: #f2f2f2;
+}
+.time_btn {
+  border: 1px solid #fda340;
+  color: #FDA340;
+  font-size: 20px;
+  line-height: 2rem;
+  width: 8.5rem;
+  height: 2rem;
+  background-color: #fefefe;
+}
+.active {
+  border: none;
+  font-size: 20px;
+  color: white;
+  line-height: 2rem;
+  width: 8.5rem;
+  height: 2rem;
+  background-color: #FDA340;
+}
+.time_bar {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+.time {
+  margin-left: 0.5rem;
+  color: #989898;
+  font-size: 14px;
+}
+.line {
+  vertical-align: middle;
+  width: 16rem;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+.employee_info {
+  position: absolute;
+  border-radius: 6px;
+  width: 16rem;
+  height: 3rem;
+  background-color: white;
+  margin-left: 3rem;
+}
+.yingdao {
+  position: relative;
+  left: 1.5rem;
+  top:0.9rem;
+}
+.renshu {
+  position: relative;
+  left: 3.5rem;
+  top: 0.9rem;
+}
+.xiangqing {
+  position: relative;
+  left: 8rem;
+  top: 0.9rem;
+}
+.right {
+  position: relative;
+  left: 8rem;
+  top: 0.9rem;
+}*/

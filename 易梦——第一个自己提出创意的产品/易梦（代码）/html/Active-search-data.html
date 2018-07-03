@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>时间选择</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <style>
+        html,
+        body{
+            height:100%;
+        }
+    	.big-box{
+    	   height:auto;
+    	   width:100%;
+    	   background:#ffffff; 	   
+    	}
+    	.title{
+    	   height:2.5rem;
+    	   width:100%;
+    	   text-align:center;
+    	   line-height:2.5rem;
+    	   color:#FFFFFF;
+    	   background:#00CCFF;
+    	}
+    	.box1{
+    	   color:#999999;
+    	   height:2rem;
+    	   width:100%;
+    	   margin-top:0.8rem;   	   
+    	}
+    	.box2{
+    	   color:#5C5C5C;
+    	   height:2rem;
+    	   width:100%;   	   
+    	}
+    	.box3{
+    	   color:#000;
+    	   height:2rem;
+    	   width:100%; 
+ 	       border-top:1px solid #D7D7D7;
+ 	       border-bottom:1px solid #D7D7D7;
+    	}
+    	.box4{
+    	   color:#5c5c5c;
+    	   height:2rem;
+    	   width:100%;   	   
+    	}
+    	.box5{
+    	   color:#999999;
+    	   height:2rem;
+    	   width:100%;   	   
+    	}
+    	.box6{
+    	   color:#FFFFFF;
+    	  margin-top:0.8rem;
+    	  font-size:1.3rem;
+    	  height:2.5rem;
+    	  background:#999999;
+    	}
+        .box1 span{
+            line-height:2rem;
+            width: 100%;
+        }
+        .box2 span{
+            line-height:2rem;
+            width: 100%;
+        }
+        .box3 span{
+           line-height:2rem;
+            width: 100%;
+        }
+        .box4 span{
+            line-height:2rem;
+            width: 100%;
+        }
+        .box5 span{
+            line-height:2rem;
+            width: 100%;
+        }
+    	.box1 a{
+    	   margin:0rem 13% 0rem 5%;
+    	}
+    	.box2 a{
+    	   margin:0rem 13% 0rem 5%;
+    	}
+    	.box3 a{
+    	   
+    	   margin:0rem 13% 0rem 5%;
+        }
+    	.box4 a{
+    	   margin:0rem 13% 0rem 5%;
+    	}
+    	.box5 a{
+    	   margin:0rem 13% 0rem 5%;
+    	}
+    	.box6a{
+    	float: left;
+    	height:100%;
+    	width:49.8%;
+    	border-right:1px solid #FFFFFF;
+    	text-align:center;
+    	   line-height:3rem;
+    	   background:#00CCFF;
+    	}
+    	.box6b{
+    	float: right;
+    	height:100%;
+    	width:49.8%;
+    	text-align:center;
+    	   line-height:3rem;
+    	   background:#00CCFF;
+    	}   	
+    </style>
+</head>
+<body>
+	<div class="big-box" style="position: fixed;bottom: 0;top:auto;">
+	   <div class="title">2017年4月7日星期三</div>
+	   <div class="box1">
+	      <span>
+	       <a>5日</a>
+		   <a>14时</a>
+		   <a>30分</a>
+		  </span>		     
+	   </div>
+	   <div class="box2">
+       <span>
+    	   <a>6日</a>
+    	   <a>15时</a>
+    	   <a>31分</a></div>
+       </span>
+	   <div class="box3">
+       <span>
+    	   <a>7日</a>	   
+    	   <a>16时</a>	  
+    	   <a>32分</a>	
+       </span>   
+	   </div>
+	   <div class="box4">
+       <span>
+    	   <a>8日</a>
+    	   <a>17时</a>	 
+    	   <a>33分</a>
+       </span>
+       </div>
+	   <div class="box5">
+       <span>
+    	   <a>9日</a>
+    	   <a>18时</a>	 
+    	   <a>34分</a> 
+       </span>
+       </div>	   
+	   <div class="box6">
+	      <div class="box6a" onclick="api.closeWin({
+          });">确定</div>
+	       <div class="box6b" onclick="api.closeWin({
+          });">取消</div>
+	   </div>    
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+</script>
+</html>

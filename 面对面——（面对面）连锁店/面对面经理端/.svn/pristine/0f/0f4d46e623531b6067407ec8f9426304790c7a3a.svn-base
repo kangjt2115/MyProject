@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+    <div class="tag"></div>
+    <div class="list_frame" onclick="chakan()">
+      <span class="">对张浩哲的考核</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="chakan()">
+      <span class="">对白雪峰的考核</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+    <div class="list_frame" onclick="chakan()">
+      <span class="">对魏泽毅的考核</span>
+      <span class="aui-iconfont aui-icon-right right"></span>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+
+    };
+		function chakan(){
+			api.openWin({
+            name: 'duty',
+            url: './duty.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+		};
+</script>
+</html>

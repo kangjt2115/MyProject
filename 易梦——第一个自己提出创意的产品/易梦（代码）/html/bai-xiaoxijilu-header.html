@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>聊天记录</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		.bai-tou{
+			background-color: #00ccff;
+		}
+		.bai-entry-p{
+            margin: 0 auto;
+            /*margin-bottom: 0.4rem;*/
+            width: 95%;
+            color: white;
+            background: #00ccff;
+        }
+        .img1 img{
+            width: 1rem;
+            height: 1rem;
+        }   
+        .img2 img{
+            width: 1rem;
+            height: 1rem;
+        } 
+        #header{
+            background: #00ccff;
+        }
+	</style>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav" id="header">
+    <a class="aui-pull-left aui-btn img1" onclick="fnlogin()">
+        <img src="../image/jiantou.png">
+        <span>返回</span>
+    </a>
+    <div class="aui-title">消息记录</div>
+    
+    </header>
+	<footer style="width:100%;height: 2.55rem; position: fixed;
+            bottom: 0;" id="footer">
+        <ul class="aui-list aui-form-list">
+        	<li class="aui-list-item">
+	             <div class="aui-list-item-inner">
+                <div class="aui-list-item-label">
+                    时间
+                </div>
+                <div class="aui-list-item-input">
+                    <div class="aui-range">
+                        <input type="range" class="aui-range" value="30" max="100" min="1" step="1" id="range" />
+                    </div>
+                </div>
+            </div>
+
+	        </li>
+		</ul>
+	</footer>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    function fnlogin(){
+		api.closeWin({
+        });
+	}
+    apiready = function() {
+    	var header = $api.byId('header');$api.fixStatusBar(header);
+    	var footer = $api.byId('footer');
+    	var headerH = $api.offset(header).h;
+    	var footerH = $api.offset(footer).h;
+    	
+		api.openFrame({
+			name: 'bai-xiaoxijilu',
+			url: './bai-xiaoxijilu.html',
+			bounces: true,
+			rect: {
+				x:0,
+				y:headerH,
+				w:'auto',
+				h:api.winHeight-headerH-footerH,
+			}
+		});
+    	
+    }
+</script>
+</html>

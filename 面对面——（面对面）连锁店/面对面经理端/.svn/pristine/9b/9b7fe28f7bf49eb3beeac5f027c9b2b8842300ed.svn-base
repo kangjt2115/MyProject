@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mine.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+</head>
+<body>
+    <div class="Head_Name">
+    	<img src="../image/head_img.jpg" />
+    	<span>白雪峰</span>
+    </div>
+    <div class="Post">
+    	<span class="Post_left">岗位</span>
+    	<span class="Post_right">服务员</span>
+    </div>
+    <div class="ID">
+    	<span class="ID_left">工号</span>
+    	<span class="ID_right">CA984</span>
+    </div>
+    <div class="Tel" onclick="modify()">
+    	<span class="Tel_left">手机号</span>
+    	<i class="iconfont">&#xe65f;</i>
+    	<span class="Tel_right">18516047795</span>
+    </div>
+    <div class="button">退出登录</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+
+	};
+	function modify(){
+		api.openWin({
+					name: 'modify_Telphone',
+					url: './modify_Telphone.html',
+					pageParam: {
+							name: 'test'
+					}
+			});
+	};
+</script>
+</html>

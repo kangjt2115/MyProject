@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    	body{
+    		
+    	}
+        #header{
+            background: #00ccff;
+            position:fixed;
+            top:0;
+            bottom:auto;
+        }
+        .img1{
+            width: 0.9rem;
+            height: 0.9rem;
+        }
+        #search{
+            background: #f2f2f2;
+        }
+        .wenjian{
+            height: 4rem;
+            padding: 0.5rem 0.75rem;
+            background: #fff;
+            overflow: hidden;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .img2{
+        margin-top:0.1rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            float: left;
+        }
+        .right1{
+            width: 62%;
+            float: left;
+            margin-left: 0.75rem;
+        }
+        .kk{
+            margin-top: 0.9rem;
+        }
+        .kk1{
+            margin-top: -0.1rem;
+        }
+        .kk0{
+            font-size: 0.8rem;
+        }
+        .right2{
+            margin-top: 2.2rem;
+            float: right;
+            font-size: 0.6rem;
+            color: #757575;
+        }
+        .filebox{
+                padding-top:2.25rem;
+
+        }
+    </style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+        <a class="aui-pull-left aui-btn" onclick="back()">
+            <span class="aui-iconfont aui-icon-left"></span>返回
+        </a>
+        <div class="aui-title">群文件</div>
+        <a class="aui-pull-right aui-btn">
+            <img class="img1" src="../image/jiahao1.png">
+        </a>
+    </header>
+    <div class="filebox">
+    <div class="aui-searchbar" id="search">
+        <div class="aui-searchbar-input aui-border-radius" tapmode onclick="doSearch()">
+            <i class="aui-iconfont aui-icon-search"></i>
+            <form action="javascript:search();">
+                <input type="search" placeholder="搜索文件名/上传者" id="search-input">
+            </form>
+        </div>
+    </div>
+    <div class="wenjian">
+        <img class="img2" src="../image/word.png">
+        <div class="right1">
+            <span class="kk0">吉林大学招生简章.doc</span>
+            <p class="kk">57k&nbsp;&nbsp;来自15熊猫</p>
+        </div>
+        <div class="right2">05-03</div>
+    </div>
+    <div class="wenjian">
+        <img class="img2" src="../image/excel.png">
+        <div class="right1">
+            <span class="kk0">吉林大学自主招生初审合格考生名单.xls</span>
+            <p class="kk1">57k&nbsp;&nbsp;来自14祥子</p>
+        </div>
+        <div class="right2">04-27</div>
+    </div>
+    <div class="wenjian">
+        <img class="img2" src="../image/rar.png">
+        <div class="right1">
+            <span class="kk0">心理期末考试试题.rar</span>
+            <p class="kk">57k&nbsp;&nbsp;来自计科佳佳</p>
+        </div>
+        <div class="right2">04-25</div>
+    </div>
+    <div class="wenjian">
+        <img class="img2" src="../image/word.png">
+        <div class="right1">
+            <span class="kk0">吉林大学招生简章.doc</span>
+            <p class="kk">57k&nbsp;&nbsp;来自15熊猫</p>
+        </div>
+        <div class="right2">05-03</div>
+    </div>
+    <div class="wenjian">
+        <img class="img2" src="../image/excel.png">
+        <div class="right1">
+            <span class="kk0">吉林大学自主招生初审合格考生名单.xls</span>
+            <p class="kk1">57k&nbsp;&nbsp;来自14祥子</p>
+        </div>
+        <div class="right2">04-27</div>
+    </div>
+    <div class="wenjian">
+        <img class="img2" src="../image/rar.png">
+        <div class="right1">
+            <span class="kk0">心理期末考试试题.rar</span>
+            <p class="kk">57k&nbsp;&nbsp;来自计科佳佳</p>
+        </div>
+        <div class="right2">04-25</div>
+    </div></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+        var header=$api.byId('header');
+		$api.fixStatusBar(header);
+	};
+	function back(){
+	api.closeWin({
+    });
+	}
+</script>
+</html>

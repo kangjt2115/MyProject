@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+      <title>title</title>
+      <link rel="stylesheet" type="text/css" href="../css/api.css">
+      <link rel="stylesheet" type="text/css" href="../css/aui.css">
+      <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+      <style type="text/css">
+        html{
+          width: 100%;
+          height: 100%;
+        }
+        body{
+          width: 100%;
+          height: 100%;
+          background-color: #f9f9f9;
+        }
+        form{
+          width: 100%;
+          height: 2.25rem;
+          padding: 0.5rem 1rem;
+          position: relative;
+        }
+        #search{
+          width: 100%;
+          height: 1.25rem;
+          background-color: #fff;
+          border-radius: 0.4rem;
+          border: 1px solid #ccc;
+        }
+        .icn{
+          position: absolute;
+          left:86.5%;
+          top: 50%;
+          margin-top: -0.6rem;
+        }
+        .switch{
+          width: 100%;
+          height: 1.4rem;
+          background-color: #fff;
+          color: #333;
+          padding: 0 0.6rem;
+        }
+        .text{
+          font-size: 0.5rem;
+          height: 1.4rem;
+          line-height: 1.4rem;
+          float: left;
+        }
+        .arrow{
+          float: right;
+          height: 1.4rem;
+          line-height: 1.4rem;
+        }
+        .symbol{
+          width: 100%;
+          height: 1.2rem;
+          font-size: 0.7rem;
+          color: #989898;
+          line-height: 1.2rem;
+        }
+        .people{
+          width: 100%;
+          height: 3.7rem;
+          background-color: #fff;
+          padding: 0.5rem 0.6rem;
+          border-bottom: 1px solid #eee;
+        }
+        .left{
+          float: left;
+        }
+        .left img{
+          width: 2.7rem;
+          height: 2.7rem;
+          float: left;
+          border-radius: 1.25rem;
+        }
+        .info{
+          height: 2.7rem;
+          width: 4rem;
+          float: left;
+          margin-left: 1rem;
+        }
+        .name{
+          font-size: 0.75rem;
+          color: #333;
+          padding: 0.2rem 0;
+        }
+        .job{
+          font-size: 0.6rem;
+          color: #aaa;
+          padding: 0.2rem 0;
+        }
+        .right{
+          float: right;
+          width: 6.5rem;
+          height: 2.7rem;
+        }
+        .tel{
+          height: 2.7rem;
+          width: 4.5rem;
+          font-size: 0.7rem;
+          color: #888;
+          float: left;
+          line-height: 2.7rem;
+        }
+        .icon {
+         width: 1.4em; height: 1.4em;
+         vertical-align: -0.15em;
+         fill: #fda340;
+         overflow: hidden;
+        }
+        .telicn{
+          height: 2.7rem;
+          line-height: 3rem;
+          float: right;
+        }
+  </style>
+  </head>
+  <body>
+    <form>
+      <div class="icn"><i class="iconfont icon-icon-test"></i></div>
+      <input id="search" type="search" name="">
+    </form>
+    <div class="switch">
+      <span class="text">按部门查找</span>
+      <div class="arrow"><i class="iconfont icon-xiangyoujiantou"></i></div>
+    </div>
+    <div class="telclass">
+      <div class="symbol">&nbsp;&nbsp;&nbsp;A</div>
+      <div class="people">
+        <div class="left">
+          <img src="../image/head_img.jpg">
+          <div class="info">
+            <div class="name">白雪峰</div>
+            <div class="job">市场部经理</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="tel">18843019528</div>
+          <div class="telicn"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dianhua"></use>
+          </svg></div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="left">
+          <img src="../image/head_img.jpg">
+          <div class="info">
+            <div class="name">白雪峰</div>
+            <div class="job">市场部经理</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="tel">18843019528</div>
+          <div class="telicn"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dianhua"></use>
+          </svg></div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="left">
+          <img src="../image/head_img.jpg">
+          <div class="info">
+            <div class="name">白雪峰</div>
+            <div class="job">市场部经理</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="tel">18843019528</div>
+          <div class="telicn"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dianhua"></use>
+          </svg></div>
+        </div>
+      </div>
+      <div class="symbol">&nbsp;&nbsp;&nbsp;B</div>
+      <div class="people">
+        <div class="left">
+          <img src="../image/head_img.jpg">
+          <div class="info">
+            <div class="name">白雪峰</div>
+            <div class="job">市场部经理</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="tel">18843019528</div>
+          <div class="telicn"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dianhua"></use>
+          </svg></div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="left">
+          <img src="../image/head_img.jpg">
+          <div class="info">
+            <div class="name">白雪峰</div>
+            <div class="job">市场部经理</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="tel">18843019528</div>
+          <div class="telicn"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dianhua"></use>
+          </svg></div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="left">
+          <img src="../image/head_img.jpg">
+          <div class="info">
+            <div class="name">白雪峰</div>
+            <div class="job">市场部经理</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="tel">18843019528</div>
+          <div class="telicn"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dianhua"></use>
+          </svg></div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  <script type="text/javascript" src="../script/api.js"></script>
+  <script src="../script/iconfont.js"></script>
+  <script type="text/javascript">
+      apiready = function(){
+
+      };
+  </script>
+  </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		.bai-tou{
+			background-color: #00ccff;
+		}
+		.bai-body{
+			background-color: #f5f5f5;
+		}
+		.bai-login{
+			height: 1.1rem;
+			width: 1.1rem;
+		}
+		
+	</style>
+</head>
+<body class="bai-body">
+    <header class="aui-bar aui-bar-nav bai-tou" id="header">
+    	<div class="aui-title">我的资料</div>
+    	<a class="aui-pull-right aui-btn ">
+        	<img class="bai-login" src="../image/baishezhi.png" />
+    	</a>
+	</header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+    	var header = $api.byId('header');
+    	$api.fixStatusBar(header);
+    	var headerH = $api.offset(header).h;
+    	
+		api.openFrame({
+			name: 'Mine_Login',
+			url: './Mine_Login.html',
+			bounces: true,
+			rect: {
+				x:0,
+				y:headerH,
+				w:'auto',
+				h:'auto',
+			}
+		});
+    	
+    }
+</script>
+</html>

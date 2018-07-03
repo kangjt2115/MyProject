@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		.bai-tou{
+			background-color: #00ccff;
+		}
+	</style>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav bai-tou bai-header" id="header">
+	    <a class="aui-pull-left aui-btn" onclick="fnlogin()">
+	        <span class="aui-iconfont aui-icon-left"></span>
+	    </a>
+	    <div class="aui-title">忘记密码</div>
+	    <a class="aui-pull-right aui-btn ">
+	        <div>登陆</div>
+	    </a>
+
+	</header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	function fnlogin(){
+		api.closeWin({
+        });
+	}
+    apiready = function() {
+    	var header = $api.byId('header');
+    	$api.fixStatusBar(header);
+    	var headerH = $api.offset(header).h;
+    	
+		api.openFrame({
+			name: 'Mine_Entry_Forget',
+			url: './Mine_Entry_Forget.html',
+			bounces: true,
+			rect: {
+				x:0,
+				y:headerH,
+				w:'auto',
+				h:'auto',
+			}
+		});
+    	
+    }
+</script>
+</html>

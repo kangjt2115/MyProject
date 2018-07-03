@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f2f2f2;
+}
+
+.jiange {
+    height: 0.75rem;
+}
+
+.headercol {
+    background-color: #fefefe;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.titlecol {
+    color: black;
+    font-weight: bold;
+}
+
+#left {
+    color: black;
+}
+video{
+  width: 100%;
+  background: white;
+}
+.content{
+  padding: 0.75rem;
+  background-color: white;
+  margin-bottom: 1.5rem;
+}
+.title{
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.content div img{
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.content p{
+  color: #333;
+  font-size: 0.8rem;
+}
+.content .zi_title{
+  font-weight: bold;
+}
+.bottom{
+  margin-bottom: 0.5rem;
+}
+.content p span{
+  font-weight: bold;
+}
+.submit{
+  height: 2.5rem;
+  background: white;
+  margin-bottom: 4rem;
+}
+.submit span{
+  color:#FDA340;
+  width: 100%;
+  text-align: center;
+  line-height: 2.5rem;
+}

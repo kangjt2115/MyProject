@@ -1,0 +1,515 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/active.css" />
+	<style>
+		.bai-zhongjian{
+			height:12.25rem;
+			width: 100%;
+			background-size: cover;
+			background: url("../image/bai33333.jpg") no-repeat  center;
+			padding-top:2.0rem;
+		}
+		.bai-img1{
+			width: 100%;
+			height: 100%;
+		}
+		.bai-div-img2{
+			width: 3.8rem;
+			height: 3.8rem;
+			border: 2px solid #FFFFFF;
+			border-radius: 3.75rem;
+			margin:0 auto;
+		}
+		.bai-img2{
+			width: 3.65rem;
+			height: 3.6rem;
+			border-radius: 3.75rem;
+		}
+		.bai-body{
+			background-color: #f5f5f5;
+		}
+		.bai-zhongjian-div{
+			font-family: "微软雅黑";
+			font-size: 0.8rem;
+			width:100%;
+			height:1.0rem;
+			text-align:center;
+			color: white;
+			margin-top:1.0rem;
+			/*float:left;*/
+		}
+		.bai-login-img{
+			margin-top: 0.2rem;
+			height: 0.8rem;
+			width: 0.8rem;
+			float: right;
+		}
+		.bai-zhongjian-div2{
+			font-family: "微软雅黑";
+			font-size: 0.6rem;
+			width:100%;
+			height:1.0rem;
+			color: white;
+			margin-top:0.5rem;
+		}
+		.bai-zhongjian-div2 div{
+			float:left;
+		}
+		.bai-zhongjian-div3{
+			width:1px;
+			height:0.6rem;
+			background-color: white;
+			margin:0.15rem 0.3rem;
+		}
+		.bai-div1{
+			width:2.25rem;
+			margin-left:1.6rem;
+			text-align: right;
+		}
+		.bai-div2{
+			width:2.25rem;
+			
+			text-align: left;
+		}
+		.bai-zhongjian-div4{
+			font-family: "微软雅黑";
+			font-size: 0.6rem;
+			width:100%;
+			height:1.0rem;
+			text-align:center;
+			color: white;
+			margin-top:0.8rem;
+		}
+		.bai-xia{
+			background-color:white;
+			margin: 0.25rem;
+			border-radius: 5px;
+			/*border:1px solid black;*/
+			width: 97.5%;
+			height: 4.0rem;
+			padding-top: 5px;
+		}
+		.bai-xia-div{
+			margin-top:1px;
+			font-family: "微软雅黑";
+			font-size: 0.7rem;
+			color: #333333;
+		}
+		.bai-hx{
+			width: 100%;
+			height: 1px;
+			background:#f2f2f2;
+			margin-top:5px;
+		}
+		.bai-img3{
+			width: 1.1rem;
+			height: 1.1rem;
+			margin-left: 5px;
+			margin-right:5px;
+			float: left;
+		}
+		.bai-login-p{
+			width: 90%;
+			margin:0.25rem auto;
+			text-indent: 1.4rem;
+		}
+		.bai-xia2{
+			background-color:white;
+			margin: 0.25rem;
+			border-radius: 5px;
+			/*border:1px solid black;*/
+			width: 97.5%;
+			height: 6.5rem;
+			padding-top: 5px;
+			position: relative;
+		}
+		.bai-xia3{
+			background-color:white;
+			margin: 0.25rem;
+			border-radius: 5px;
+			/*border:1px solid black;*/
+			width: 97.5%;
+			height: 1.65rem;
+			padding-top: 5px;
+			position: relative;
+		}
+		.bai-xia4{
+			background-color:white;
+			margin: 0.25rem;
+			border-radius: 5px;
+			/*border:1px solid black;*/
+			width: 97.5%;
+			height: 2.5rem;
+		}
+		.bai-xia5{
+			background-color:white;
+			margin: 0.25rem;
+			border-radius: 5px;
+			/*border:1px solid black;*/
+			width: 97.5%;
+			height: 7.0rem;
+			padding-top: 5px;
+			position: relative;
+		}
+		.bai-login-zl{
+			height: 0.8rem;
+			width: 80%;
+			margin: 0 auto;
+			margin-top:0.3rem;
+		}
+		.bai-login-zl1{
+			font-size:0.65rem;
+			font-family:"Microsoft Sans Serif";
+			height: 0.8rem;
+			width: 50%;
+			text-align:left;
+			float:left;
+		}
+		.bai-login-zl2{
+			font-size:0.65rem;
+			font-family:"Microsoft Sans Serif";
+			height: 0.8rem;
+			width: 50%;
+			text-align:left;
+			float:left;
+		}
+		.bai-img4{
+			height: 1.1rem;
+			width: 1.1rem;
+			position:absolute;
+			right: 0.25rem;
+			top:0.25rem;
+		}
+		.bai-zhaomulin{
+			font-size: 0.65rem;
+			height:1.0rem;
+			width:2.0rem;
+			margin:auto 0;
+			color:#CCCCCC;
+			float:right;
+		}
+		.bai-xia4-zuo{
+			height: 100%;
+			width: 75%;
+			float:left;
+		}
+		.bai-xia4-you{
+			height: 100%;
+			width: 25%;
+			float:left;
+			border-left: 1px solid #CCCCCC;
+		}
+		.bai-xia4-you img{
+			height: 1.6rem;
+			width: 1.6rem;
+			margin: 0.5rem auto;
+		}
+		.bai-xia4-zuo1{
+			height: 100%;
+			width: 33.33%;
+			float:left;
+		}
+		.bai-xia4-zuo1 img{
+			height: 1.25rem;
+			width: 1.25rem;
+			margin:5% auto;
+			margin-bottom:0;
+		}
+		.bai-xia4-zuo1 span{
+			width:1.5rem;
+			height:0.8rem;
+			font-size: 0.65rem;
+			color: #CCCCCC;
+			margin-left:39%;
+			text-align: center;
+		}
+		.bai-xia6{
+			background-color:white;
+			margin: 0.25rem;
+			border-radius: 5px;
+			/*border:1px solid black;*/
+			width: 97.5%;
+			height: 31.0rem;
+			padding-top: 5px;
+		}
+		.bai-xia5-img{
+			width: 100%;
+			height: 5rem;
+			position: relative;
+		}
+		.bai-xia5-img1{
+			width: 5rem;
+			height: 5rem;
+			float: left;
+			margin-left: 0.2rem;
+			margin-top: 0.2rem;
+		}
+		.bai-xia5-img2{
+			width: 5rem;
+			height: 5rem;
+		}
+		.bai-xia5-img3{
+			display: block;
+			overflow: hidden;
+			width: 2.4rem;
+			height: 2.5rem;
+			float: left;
+			margin-right: 0.2rem;
+			margin-bottom: 0.2rem;
+		}
+		.bai-xia5-img6{
+			display: block;
+			overflow: hidden;
+			width: 2.4rem;
+			height: 2.5rem;
+			margin-bottom: 0.2rem;
+		}
+		.bai-xia5-img4{
+			width: 5rem;
+			height: 2.3rem;
+		}
+		.bai-xia5-img5{
+			width: 3rem;
+			height: 5rem;
+		}
+		.bai-xia5-a{
+			font-size: 0.65rem;
+			color: #00ccff;
+			/*text-decoration: underline;*/
+		}
+		.kk{
+			height: 100%;
+			width: 8.5rem;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.bai-guanzhu{
+			background: none;
+			border: 0.05rem solid white;
+			margin-left:2.6rem;
+			height: 1.5rem;
+		}
+		.bai-zhaomulin{
+			font-size: 0.65rem;
+			height:1.0rem;
+			width:2.0rem;
+			margin-top:0.15rem;
+			color:#CCCCCC;
+			float:right;
+		}
+	</style>
+</head>
+<body class="bai-body">
+    <div class="bai-zhongjian">
+	    <div class="kk">
+	    	<div class="bai-div-img2">
+	    		<img src="../image/baiimg.jpg" / class="bai-img2">
+	    	</div>
+	    	<div class="bai-zhongjian-div">小白杨小丫小白杨
+	    	<img src="../image/baiVIP.png" class="bai-login-img" /></div>
+	    	<div class="bai-zhongjian-div2">
+	    		<p><div class="aui-btn bai-guanzhu">已关注</div></p>
+	    		<!--<div class="bai-div1">关注4</div>
+	    		<div class="bai-zhongjian-div3"></div>
+	    		<div class="bai-div2">粉丝8</div>-->
+	    	</div>
+	    	<div class="bai-zhongjian-div4" id="xinyujifen">信誉等级 Lv12</div>
+	    </div>
+    </div>
+    <div class="bai-xia">
+    	<img src="../image/baijianjie.png" / class="bai-img3">
+    	<div class="bai-xia-div">简介</div>
+    	<div class="bai-hx"></div>
+    	<p class="bai-login-p">早已无人在我身旁，遍体鳞伤又能怎样。早已无人在我心上，放弃世界又有何妨。</p>
+    </div>
+    <div class="bai-xia2">
+    	<img src="../image/baijibenziliao.png" / class="bai-img3">
+    	<!--<img src="../image/baixiugai.png" / class="bai-img4">-->
+    	<div class="bai-xia-div">基本资料</div>
+    	<div class="bai-hx"></div>
+    	<div class="bai-login-zl">
+    		<div class="bai-login-zl1">昵称</div>
+    		<div class="bai-login-zl2">小白杨小丫小白杨</div>
+    	</div>
+    	<div class="bai-login-zl">
+    		<div class="bai-login-zl1">生日</div>
+    		<div class="bai-login-zl2">1998-01-10</div>
+    	</div>
+    	<div class="bai-login-zl">
+    		<div class="bai-login-zl1">所在地</div>
+    		<div class="bai-login-zl2">内蒙古 通辽市</div>
+    	</div>
+    	<div class="bai-login-zl">
+    		<div class="bai-login-zl1">真实姓名</div>
+    		<div class="bai-login-zl2">白雪峰</div>
+    	</div>
+    </div>
+    <!--<div class="bai-xia3">
+    	<div class="bai-zhaomulin">42张</div>
+    	<img src="../image/baikajuan.png" / class="bai-img3">
+    	<div class="bai-xia-div">招募令</div>
+    </div>
+    <div class="bai-xia4">
+    	<div class="bai-xia4-zuo">
+    		<div class="bai-xia4-zuo1">
+    			<img src="../image/baidiyi.png"/>
+    			<span>3张</span>
+    		</div>
+    		<div class="bai-xia4-zuo1">
+    			<img src="../image/baidier.png"/>
+    			<span>25张</span>
+    		</div>
+    		<div class="bai-xia4-zuo1">
+    			<img src="../image/baidisan.png"/>
+    			<span>14张</span>
+    		</div>
+    	</div>
+    	<div class="bai-xia4-you">
+    		<img src="../image/baixinjianyemian.png"/>
+    	</div>
+    </div>-->
+    <div class="bai-xia3" onclick="fnloginWo()">
+    	<div class="bai-zhaomulin">3个</div>
+    	<img src="../image/baiwodehuodong.png" / class="bai-img3">
+    	<div class="bai-xia-div">关于他的活动</div>
+    </div>
+    <div class="bai-xia3">
+    	<div class="bai-zhaomulin"><a href="" class="bai-xia5-a" onclick="fnloginPho()">更多</a></div>
+    	<img src="../image/baizhaopianqiang.png" / class="bai-img3">
+    	<div class="bai-xia-div">照片墙</div>
+	</div>
+    <!--<div class="bai-xia5">
+    	<img src="../image/baizhaopianqiang.png" / class="bai-img3">
+    	<div class="bai-xia-div">照片墙</div>
+    	<div class="bai-hx"></div>
+    	<div class="bai-xia5-img">
+    		<div class="bai-xia5-img1"><img src="../image/baiimg2.jpg" class="bai-xia5-img2"></div>
+    		<div class="bai-xia5-img1">
+    			<img src="../image/baiimg5.jpg" class="bai-xia5-img3">
+    			<img src="../image/baiimg8.jpg" class="bai-xia5-img6">
+    			<img src="../image/bailala.jpg" class="bai-xia5-img4">
+    		</div>
+    		<div class="bai-xia5-img1"><img src="../image/bai2.jpg" class="bai-xia5-img5"></div>
+    		<a href="" class="bai-xia5-a" onclick="fnloginPho()">更多</a>
+    	</div>
+    </div>-->
+    <div class="bai-xia6">
+    	<img src="../image/baihuodong.png" / class="bai-img3">
+    	<div class="bai-xia-div">推荐活动</div>
+    	<div class="bai-hx"></div>
+    	<div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="aui-card-list active-box1" onclick="api.openWin({
+		     name: 'Active-Details_head',
+		     url: './Active-Details_head.html'
+	     });">
+	    
+	        <div class="aui-title active-box2">“吉大讨论组”--探究计算机的秘密</div>
+	         <div class="aui-card-list-user-name">
+	                <div>
+	                <span class="active-box3">I robort 2333</span>
+	                <span class="Active-LV">LV6</span>
+	                </div>
+	                
+	                <small class="Active-small">现在</small>
+	            </div>
+	         
+	        <div class="aui-card-list-content-padded">
+	            <img src="../image/Active-img.jpg" class="Active-img"/>
+	            <div class="Active-content">
+	            <p class="Active-p1" >人工智能吉大讨论组"招人啦，只要你对人工智能充满兴趣，不论你了解多少，是不是精英......</p>
+	            <span class="Active-person">参与人数：33/50</span>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    function fnloginWo(){
+	api.openWin({
+	        name: 'Mine_Login_wodehuodong_header',
+	        url: './Mine_Login_wodehuodong_header.html'
+        });
+	}
+	function fnloginPho(){
+	api.openWin({
+	        name: 'Mine_Login_PhotoWall1_header',
+	        url: './Mine_Login_PhotoWall1_header.html'
+        });
+	}
+</script>
+</html>

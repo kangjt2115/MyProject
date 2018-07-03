@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/employeeTrain_good.css" />
+</head>
+
+<body>
+    <header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left" onclick="api.closeWin()"></span>
+        </div>
+        <div class="aui-title titlecol">产品培训</div>
+    </header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      closeWin();
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+      var headerH = $api.offset(head).h;
+      
+      var user = $api.getStorage('user');
+		if(user.font_size=='normal'){
+			$('html').css("font-size","125%");
+		}else if(user.font_size=='big'){
+			$('html').css("font-size","156.25%");
+		}
+      
+      api.addEventListener({
+          name: 'Font_normal'
+      }, function(ret, err) {
+          $('html').css("font-size","125%");
+      });
+      api.addEventListener({
+          name: 'Font_big'
+      }, function(ret, err) {
+          $('html').css("font-size","156.25%");
+      });
+      api.openFrame({
+  		    name: 'employeeTrain_good',
+  		    url: './employeeTrain_good.html',
+  		    rect: {
+  		        x: 0,
+  		        y: headerH,
+  		        w: 'auto',
+  		        h: api.winHeight-headerH
+  		    },
+  		    pageParam: {
+  		        name: 'test'
+  		    }
+  		});
+      
+    };
+    function closeWin(){
+  		$('#left').on("click",function(){
+  			api.closeWin();
+  		})
+  	}
+</script>
+
+</html>

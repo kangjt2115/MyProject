@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <style>
+    	body{
+    		
+    	}
+        .img1 img{
+            width: 0.9rem;
+            height: 0.9rem;
+        }   
+        .img2 img{
+            width: 1rem;
+            height: 1rem;
+        } 
+        #header{
+            background: #00ccff;
+        }
+        #footer{
+            padding:0.2rem 0;
+            background: #f2f2f2;
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            width: 100%;
+        }
+        .img3{
+            width: 10%;
+            float: left;
+            margin-left:0.2rem;
+            
+        }
+
+        form .ipt{
+            height: 1.65rem;
+            margin-left: 0.2rem;
+            margin-top: 0.1rem;
+            
+            width: 65%;
+            float: left;
+            background: #fff;
+            border-radius: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav" id="header">
+    <a class="aui-pull-left aui-btn img1" onclick="back()">
+        <img src="../image/jiantou.png">
+        <span>消息</span>
+    </a>
+    <div class="aui-title">四级交流研讨群</div>
+    <a class="aui-pull-right aui-btn img2" onclick="toData()">
+        <img src="../image/group.png">
+    </a>
+</header>
+<footer id="footer">
+<div class="img3">
+    <img src="../image/shuohua.png">
+</div>
+    <form>
+        <input class="ipt" type="text" name="">
+    </form>
+<div class="img3">
+    <img src="../image/biaoqing.png">
+</div>
+<div class="img3">
+    <img src="../image/jiahao.png">
+</div>
+</footer>
+	
+	
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		var header=$api.byId('header');
+        var footer=$api.byId('footer');
+		$api.fixStatusBar(header);
+        var headerH=$api.offset(header).h;
+        var footerH=$api.offset(footer).h;
+        api.openFrame({
+            name: 'Message-GroupChatContent',
+            url: './Message-GroupChatContent.html',
+            rect: {
+                x: 0,
+                y: headerH,
+                w: 'auto',
+                h: api.winHeight-headerH-footerH
+            }
+        });
+	};
+    function back(){
+        api.closeWin({
+        });
+    }
+    function toData(){
+        api.openWin({
+            name: 'Message-JoinGroupData',
+            url: './Message-JoinGroupData.html',
+            pageParam: {
+                name: 'test'
+            }
+        });
+    }
+</script>
+</html>

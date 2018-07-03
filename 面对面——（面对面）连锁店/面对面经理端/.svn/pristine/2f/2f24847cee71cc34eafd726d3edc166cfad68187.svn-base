@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left" onclick="api.closeWin()"></span>
+        </div>
+        <div class="aui-title titlecol">个人考勤</div>
+    </header>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">员工姓名</span>
+      <span class="aui-iconfont right">张浩哲</span>
+    </div>
+    <div class="tag">08：00-09：00&nbsp&nbsp&nbsp13：00-15：00&nbsp&nbsp&nbsp19：00-22：00</div>
+    <div class="list_frame">
+      <span class="">请假</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="list_frame">
+      <span class="">迟到</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="list_frame">
+      <span class="">早退</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="list_frame">
+      <span class="">旷工</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">工时变动</span>
+      <span class="right"><img src="../image/minus.png" alt="" style="float: left;width: 1rem;height: 1rem;margin-top: 0.75rem;margin-right: 0.75rem;"/>3.75小时<img src="../image/plus.png" alt="" style="float: right;width: 1rem;height: 1rem;margin-top: 0.75rem;margin-left: 0.75rem;"/></span>
+    </div>
+    <div class="tag"></div>
+    <div class="tag"></div>
+    <div class="button" onclick="confirm()">完成</div>
+    <div class="tag"></div>
+    <div class="tag"></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+    };
+		function confirm(){
+			alert(123);
+			setTimeout(function(){
+				api.closeWin();
+			},2500)
+		};
+</script>
+</html>

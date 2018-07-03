@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	<style>
+		html{
+            width: 100%;
+            height: 100%;
+            /*background: #000;
+            opacity: 0.6;*/
+        }
+		body{
+            width: 100%;
+            height: 100%;
+            background:transparent;
+
+        }
+		
+        .bai-add-div1{
+        	height: 11.35rem;
+        	width: 100%;
+        	background:#f5f5f5;
+            position: fixed;
+            bottom: 0;
+        }
+        .bai-add-div2{
+        	height: 1.2rem;
+        	width: 100%;
+        	background:white;
+        	border-bottom: 0.07rem solid #ddd;
+            padding:0.75rem 0;
+        }
+        .bai-add-div4{
+        	width: 100%;
+            height: 1.2rem;
+        	background:white;
+        	margin-bottom: 0.5rem;
+        	padding:0.75rem 0;
+        }
+        .bai-add-div3{
+        	height: 1.2rem;
+        	width: 100%;
+        	background:white;
+            padding:0.75rem 0;
+        }
+        .bai-add-span{
+            font-family: "微软雅黑  ";
+            display: block;
+        	font-size:0.9rem;
+        	width: 5rem;
+        	margin:0 auto;
+            text-align: center;
+        }
+	</style>
+</head>
+<body>
+	<div style="width: 100%;height: 100%; background: #000;opacity: 0.6;">
+	    <div class="bai-add-div1">
+	    	<div class="bai-add-div2" onclick="api.openWin({
+	            name: 'add_paizhao1_header',
+	            url: './add_paizhao1_header.html'
+            });">
+	    		<span class="bai-add-span">从手机选择</span>
+	    	</div>
+	    	<div class="bai-add-div2" onclick="api.openWin({
+	            name: 'add_paizhao2_header',
+	            url: './add_paizhao2_header.html'
+            });">
+	    		<span class="bai-add-span">精美配图</span>
+	    	</div>
+	    	<div class="bai-add-div4" onclick="api.openWin({
+	            name: 'add_paizhao3_header',
+	            url: './add_paizhao3_header.html'
+            });">
+	    		<span class="bai-add-span">拍照</span>
+	    	</div>
+	    	<div class="bai-add-div3" onclick="api.closeWin({
+            });">
+	    		<span class="bai-add-span">取消</span>
+	    	</div>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    
+</script>
+</html>

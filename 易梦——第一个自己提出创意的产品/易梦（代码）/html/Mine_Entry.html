@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		.bai-tou{
+			background-color: #00ccff;
+		}
+		.bai-body{
+            background-color: #f5f5f5;
+        }
+        .bai-entry-zi{
+            font-size: 0.65rem;
+            font-family: "微软雅黑";
+            color: #BCBCBC;
+            margin: 0.5rem 0.5rem;
+        }
+        .bai-entry-biao{
+            width: 100%;
+            height: 4rem;
+            background: #FFF;
+            padding: 0.5rem;
+            padding-right: 0rem;
+        }
+        .bai-entry-img{
+            width: 1rem;
+            height: 1rem;
+        }
+        .bai-entry-Binput{
+            width: 1rem;
+            color: #212121;
+            min-width: 1.5rem;
+            margin: 0;
+            padding: 0;
+            padding-right: 0.25rem;
+            line-height: 2.2rem;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .bai-entry-p{
+            margin: 0 auto;
+            margin-top: 0.45rem;
+            width: 95%;
+            color:#fff;
+        }
+        .bai-entry-a{
+            float: right;
+            font-size: 0.65rem;
+            color: #BCBCBC;
+            display: block;
+            margin-right: 0.45rem;
+            margin-top: 0.5rem;
+            text-decoration: underline;
+        }
+        .bai-entry-hx{
+            width: 25%;
+            height: 0.05rem;
+            background: #BCBCBC;
+            margin: 3rem 0.7rem;
+            float: left;
+        }
+        .bai-entry-hxz{
+            width: 30%;
+            font-size: 0.65rem;
+            text-align: center;
+            color: #BCBCBC;
+            margin: 2.5rem 0.4rem;
+            float: left;
+        }
+        /*.bai-entry-hx2{
+            width: 26%;
+            height: 1px;
+            background: #BCBCBC;
+            margin: 0px 12px;
+            margin-top: 72px;
+            float: left;
+        }*/
+        .bai-entry-zhong{
+            width: 18rem;
+            height: 8rem;
+            margin: 0 auto;
+        }
+        .bai-entry-hzdl{
+            height:3.7rem;
+        	width:2.5rem;
+        	margin-left:2.6rem;
+        	float:left;
+        }
+        .bai-entry-div1{
+        	height:2.5rem;
+        	width:2.5rem;
+        }
+        .bai-entry-div2{
+        	height:2.5rem;
+        	width:2.7rem;
+        }
+        .bai-entry-zi2{
+        	height: 1 rem;
+        	margin-top: 0.2rem;
+        	width:2.5rem;
+        	font-size:0.7rem;
+        	font-family:"微软雅黑";
+        	color:#BCBCBC;
+        	text-align: center;
+        }
+        .kkkkk{
+        	width: 18.0rem;
+        	height: 3.75rem;
+        	margin: 0 auto;
+        }
+	</style>
+</head>
+<body class="bai-body">
+	<!--<header class="aui-bar aui-bar-nav bai-tou bai-header">
+    <a class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">登录</div>
+    <a class="aui-pull-right aui-btn ">
+        <div>我要注册</div>
+    </a>
+    </header>-->
+    <div class="bai-entry-zi">用易梦活动账号登录</div>
+    <div class="aui-content aui-margin-b-15">
+    <ul class="aui-list aui-form-list">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class=" bai-entry-Binput">
+                    <img src="../image/baiyonghu.png" class="bai-entry-img">
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="text" placeholder="手机号" id="phone">
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="bai-entry-Binput">
+                    <img src="../image/baimima.png" class="bai-entry-img">
+                </div>
+                <div class="aui-list-item-input">
+                    <input type="password" placeholder="密码" id="password">
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p><div class="aui-btn aui-btn-block bai-entry-p" onclick="fnlogin1()">登录</div></p>
+    <a class="bai-entry-a" onclick="fnlogin()">忘记密码</a>
+    </div>
+    
+	<div class="bai-entry-zhong">
+	    <div class="bai-entry-hx"></div>
+	    <div class="bai-entry-hxz">使用合作账号登录</div>
+	    <div class="bai-entry-hx"></div>
+	</div>
+	<div class="kkkkk">
+	    <div class="bai-entry-hzdl">
+	    	<img src="../image/baiweixin1.png" class="bai-entry-div1">
+	    	<div class="bai-entry-zi2">微信</div>
+	    </div>
+	    <div class="bai-entry-hzdl">
+	    	<img src="../image/baiQQ1.png" class="bai-entry-div1">
+	    	<div class="bai-entry-zi2">QQ</div>
+	    </div>
+	    <div class="bai-entry-hzdl">
+	    	<img src="../image/baiweibo1.png" class="bai-entry-div2">
+	    	<div class="bai-entry-zi2">微博</div>
+	    </div>
+    </div>
+       
+    
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/APICloud-rest-SHA1.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../script/key.js"></script>
+<script type="text/javascript" src="../script/doT.js"></script>
+<script type="text/javascript">
+    function fnlogin(){
+		api.openWin({
+	        name: 'Mine_Entry_Forget_header',
+	        url: './Mine_Entry_Forget_header.html'
+        });
+	}
+	function fnlogin1(){
+		var phone = document.getElementById('phone').value;
+		var password = document.getElementById('password').value;
+		if(phone==''){
+			alert('电话号码不能为空！');
+			return;
+		}
+		if(password==''){
+			alert('密码不能为空！');
+			return;
+		}
+		var client = new Resource(APP_ID,APP_KEY);
+		var Model = client.Factory("user");
+		Model.login({"username":phone,"password":password}, function(ret,err){
+		    if(err){
+		        //处理错误 err
+		        alert('您的账号或密码错误请重新输入！');
+		    }else{
+		        //处理数据 ret
+		        alert(JSON.stringify(ret));
+		        
+		        Model.get({"_id":ret.userId}, function(ret,err){
+				    if(err){
+				        //处理错误 err
+				        alert(JSON.stringify(err));
+				    }else{
+				        //处理数据 ret
+				        alert(JSON.stringify(ret));
+				        $api.setStorage(KEY_USERINFO,ret);
+				    }
+				})
+		        
+		    }
+		})
+	
+//		api.openWin({
+//	        name: 'Mine_Login',
+//	        url: './Mine_Login.html'
+//      });
+	}
+</script>
+</html>

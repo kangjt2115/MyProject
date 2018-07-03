@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+		#header{
+			background: #00ccff;
+		}
+		.qingkuang1{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+        .qingkuang2{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .qingkuang3{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+        }
+        .aui-bar-tab .text1{
+            font-size: 0.7rem;
+            color: #212121;
+            }
+	</style>
+</head>
+<body>
+   	<header class="aui-bar aui-bar-nav" id="header">
+	    <a class="aui-pull-left aui-btn" onclick="backToSystem2()">
+	        <span class="aui-iconfont aui-icon-left"></span>
+	    </a>
+	    <div class="aui-title">账号安全中心</div>
+	</header>
+<footer class="aui-bar aui-bar-tab" id="footer">
+    <div class="aui-bar-tab-item qingkuang1">
+        <div class="aui-bar-tab-label text1">我</div>
+    </div>
+    <div class="aui-bar-tab-item qingkuang2">
+        <div class="aui-bar-tab-label text1">账号问题</div>
+    </div>
+    <div class="aui-bar-tab-item qingkuang3">
+        <div class="aui-bar-tab-label text1">安全秘籍</div>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+	    var header=$api.byId('header');
+	    	$api.fixStatusBar(header);
+    	var headerH=$api.offset(header).h;
+    	var footer=$api.byId('footer');
+    	var footerH=$api.offset(footer).h;
+        api.openFrame({
+            name: 'Message-AccountSecurity',
+            url: './Message-AccountSecurity.html',
+            rect: {
+                x: 0,
+                y: headerH,
+                w: 'auto',
+               h: api.winHeight-headerH-footerH
+            }
+        });
+	}
+	    
+    function backToSystem2(){
+		api.closeWin({
+        });
+	}
+</script>
+</html>

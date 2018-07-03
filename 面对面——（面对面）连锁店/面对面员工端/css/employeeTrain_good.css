@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f2f2f2;
+}
+
+.headercol {
+    background-color: #fefefe;
+}
+
+.titlecol {
+    color: black;
+    font-weight: bold;
+}
+
+#left {
+    color: black;
+}
+
+.jiange {
+    height: 0.75rem;
+}
+.list_frame{
+  padding:0rem 0.75rem;
+  height: 2.5rem;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.list_frame span{
+  line-height: 2.5rem;
+}
+.right{
+  float: right;
+}
+.img{
+  float:left;
+  margin-right:0.3rem;
+  margin-top:0.2rem;
+}
+.deltu{
+  margin-left:1.4rem;
+}

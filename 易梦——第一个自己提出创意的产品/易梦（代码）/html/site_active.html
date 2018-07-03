@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-pull-refresh.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <style>
+    	body{
+    		background: #f5f5f5;
+    	}
+    	.ti{
+    	display:block;
+    	float:right;
+        width:1rem;
+        height:1rem;
+        margin-top: 0.8rem !important;
+         margin-right: 0.9rem !important;
+    	}
+    	#tixing{
+    	font-size:0.6rem;
+    	margin:0.5rem 0.5rem;
+    	color:#9E9E9E;
+    	}
+    	.yes{
+    	display:none;
+    	float:right;
+        width:0.6rem;
+        height:0.6rem;
+        margin-top: 1rem !important;
+         margin-right: 0.9rem !important;
+        }
+        .active_yes{
+    	display:block;
+    	float:right;
+        width:0.6rem;
+        height:0.6rem;
+        margin-top: 1rem !important;
+         margin-right: 0.9rem !important;
+        }
+    </style>
+</head>
+<body>
+	
+
+<div >
+   <span id="tixing" >活动提醒</span>
+</div>
+<div class="aui-content  ">
+    <ul class="aui-list aui-list-in aui-margin-t-2" >
+       
+        <li class="aui-list-item aui-list-item-middle" onclick="randomSwitchBtn1(  );">
+            <div class="aui-info  aui-padded-l-10 aui-padded-r-10">
+      			<div class="aui-info-item">
+        			<span class="aui-margin-l-5">当天提醒</span>
+        			
+        		</div>
+    		</div>
+    		<img src="../image/s_yes.png" class="  yes active_yes" id="img1">
+    		<!--<input type="radio" name="ti" class="ti">-->
+        </li>
+       <li class="aui-list-item aui-list-item-middle" onclick="randomSwitchBtn2( );">
+            <div class="aui-info  aui-padded-l-10 aui-padded-r-10">
+      			<div class="aui-info-item">
+        			<span class="aui-margin-l-5">提前一天提醒</span>
+        			
+        		</div>
+    		</div>
+    		<img src="../image/s_yes.png" class=" yes"  id="img2">
+    		<!--<input type="radio" name="ti" class="ti">-->
+        </li>
+        <li class="aui-list-item aui-list-item-middle" onclick="randomSwitchBtn3(  );">
+            <div class="aui-info  aui-padded-l-10 aui-padded-r-10">
+      			<div class="aui-info-item">
+        			<span class="aui-margin-l-5">提前2天提醒</span>
+        			
+        		</div>
+    		</div>
+    		<img src="../image/s_yes.png" class=" yes"  id="img3">
+    		<!--<input type="radio" name="ti" class="ti">-->
+        </li>
+       <li class="aui-list-item aui-list-item-middle" onclick="randomSwitchBtn4(  );">
+            <div class="aui-info  aui-padded-l-10 aui-padded-r-10">
+      			<div class="aui-info-item">
+        			<span class="aui-margin-l-5">不提醒</span>
+        			
+        		</div>
+    		</div>
+    		<img src="../image/s_yes.png" class=" yes"  id="img4">
+    		<!--<input type="radio" name="ti" class="ti">-->
+        </li>
+    </ul>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	function randomSwitchBtn1(  ) {
+		var a1 = document.getElementById('img1');
+		var a2 = document.getElementById('img2');
+		var a3 = document.getElementById('img3');
+		var a4 = document.getElementById('img4');
+		a1.style.display = 'block';
+		a2.style.display = 'none';
+		a3.style.display = 'none';
+		a4.style.display = 'none';
+	}
+	function randomSwitchBtn2(  ) {
+		var a1 = document.getElementById('img1');
+		var a2 = document.getElementById('img2');
+		var a3 = document.getElementById('img3');
+		var a4 = document.getElementById('img4');
+		a1.style.display = 'none';
+		a2.style.display = 'block';
+		a3.style.display = 'none';
+		a4.style.display = 'none';
+	}
+	function randomSwitchBtn3(  ) {
+		var a1 = document.getElementById('img1');
+		var a2 = document.getElementById('img2');
+		var a3 = document.getElementById('img3');
+		var a4 = document.getElementById('img4');
+		a1.style.display = 'none';
+		a2.style.display = 'none';
+		a3.style.display = 'block';
+		a4.style.display = 'none';
+	}
+	function randomSwitchBtn4(  ) {
+		var a1 = document.getElementById('img1');
+		var a2 = document.getElementById('img2');
+		var a3 = document.getElementById('img3');
+		var a4 = document.getElementById('img4');
+		a1.style.display = 'none';
+		a2.style.display = 'none';
+		a3.style.display = 'none';
+		a4.style.display = 'block';
+	}
+</script>
+</html>

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f2f2f2;
+}
+
+.headercol {
+    background-color: #fefefe;
+}
+
+.titlecol {
+    color: black;
+    font-weight: bold;
+}
+
+#left {
+    color: black;
+}
+
+.jiange {
+    height: 0.75rem;
+}
+.list_frame{
+  padding:0rem 0.75rem;
+  height: 2.5rem;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.text_frame{
+  padding:0.75rem;
+  height: 4.5rem;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+.note{
+	padding: 0 0.75rem;
+	height: 4.5rem;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.list_frame span{
+  line-height: 2.5rem;
+  font-size: 14px;
+}
+.right{
+  float: right;
+}
+.tag{
+	font-size: 12px;
+	color:#656565;
+	padding: 0.75rem 0.75rem 0 0.75rem;
+	background: #f2f2f2;
+}
+.button{
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align:center;
+  background-color: white;
+  border-bottom: 1px solid #f2f2f2;
+	color: #fda340;
+	font-size: 14px;
+	font-weight:bold;
+}
+.success{
+	color:#0033cc;
+}
+.failure{
+	color:#989898;
+}

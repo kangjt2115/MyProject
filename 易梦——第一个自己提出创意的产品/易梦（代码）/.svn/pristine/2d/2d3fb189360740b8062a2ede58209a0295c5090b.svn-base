@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+        html{
+            background: #f2f2f2;
+        }
+        .zhifu{
+            background: #fff;
+            width: 15rem;
+            height: 13rem;
+            margin-left: 1.5rem;
+            margin-top: 1.5rem;
+            padding:0.75rem;
+        }
+        .title{
+            font-size: 0.75rem;
+        }
+        .title1{
+            font-size: 0.7rem;
+        }
+        .title2{
+            font-size: 0.7rem;
+            text-align: center;
+        }
+        .title3{
+            text-align: center;
+        }
+        .p1{
+            display: block;
+            float: left;
+            margin-top: 0.05rem;
+        }
+        .p2{
+            display: block;
+            float: left;
+            height: 1.5rem;
+        }
+        .p3{
+            display: block;
+            float: right;
+            height: 3.5rem;
+            width: 11.5rem;
+            margin-left: 0.3rem;
+        }
+        .hhh{
+            overflow: hidden;
+        }
+      /*  .qingkuang1{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+        .qingkuang2{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .qingkuang3{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+        }
+        .aui-bar-tab .text1{
+            font-size: 0.8rem;
+            }*/
+
+	</style>
+</head>
+<body>
+        <div class="zhifu">
+            <span class="title">支付凭证</span>
+            <p class="title1">7月10日11:47</p>
+            <p class="title2">支付金额</p>
+            <h1 class="title3">￥12.00</h2>
+            <div class="hhh">
+                <p class="title1 p1">支付方式:</p>
+                <span class="title p2">&nbsp;微信</span>
+            </div>
+            <div class="hhh">
+                <p class="title1 p1">付费内容:</p>
+                <span class="title p2">&nbsp;普通招募令3枚</span>
+            </div>
+            <div class="hhh">
+                <p class="title1 p1">备注:</p>
+                <div class="p3">
+                    <span class="title">您购买的商品已支付成功，请查看招募令</span>
+                </div>
+            </div>
+        </div>
+        <div class="zhifu">
+            <span class="title">支付凭证</span>
+            <p class="title1">7月10日11:47</p>
+            <p class="title2">支付金额</p>
+            <h1 class="title3">￥18.00</h2>
+            <div class="hhh">
+                <p class="title1 p1">支付方式:</p>
+                <span class="title p2">&nbsp;微信</span>
+            </div>
+            <div class="hhh">
+                <p class="title1 p1">付费内容:</p>
+                <span class="title p2">&nbsp;高级招募令3枚</span>
+            </div>
+            <div class="hhh">
+                <p class="title1 p1">备注:</p>
+                <div class="p3">
+                    <span class="title">您购买的商品已支付成功，请查看招募令</span>
+                </div>
+            </div>
+        </div>
+        <div class="zhifu">
+            <span class="title">支付凭证</span>
+            <p class="title1">7月10日11:47</p>
+            <p class="title2">支付金额</p>
+            <h1 class="title3">￥18.00</h2>
+            <div class="hhh">
+                <p class="title1 p1">支付方式:</p>
+                <span class="title p2">&nbsp;微信</span>
+            </div>
+            <div class="hhh">
+                <p class="title1 p1">付费内容:</p>
+                <span class="title p2">&nbsp;高级招募令3枚</span>
+            </div>
+            <div class="hhh">
+                <p class="title1 p1">备注:</p>
+                <div class="p3">
+                    <span class="title">您购买的商品已支付成功，请查看招募令</span>
+                </div>
+            </div>
+        </div>
+   <!--     <footer class="aui-bar aui-bar-tab" id="footer">
+            <div class="aui-bar-tab-item qingkuang1">
+                <div class="aui-bar-tab-label text1">我的交易</div>
+            </div>
+            <div class="aui-bar-tab-item qingkuang2">
+                <div class="aui-bar-tab-label text1">账户安全</div>
+            </div>
+            <div class="aui-bar-tab-item qingkuang3">
+                <div class="aui-bar-tab-label text1">常见问题</div>
+            </div>
+        </footer>-->
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    
+</script>
+</html>

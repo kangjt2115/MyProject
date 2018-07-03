@@ -1,0 +1,323 @@
+KJT.component.signCheck_checkclass=(function($,window,undefined){
+
+  var obj=function(option){
+    this.init(option);
+  };
+
+  obj.prototype={
+    constructor:obj,
+    //三位数组
+    Arr_all:[],
+    //用来记录非空班级 （非空班级指签到人大于0的班级）
+    kId:0,
+    //非空班级数组
+    Arr_classNotEmpty:[],
+    //非空班级对应年级
+    Arr_classNE_ofGrade:[],
+    //非空班级对应班级
+    Arr_classNE_ofClass:[],
+    //非空班级对应对象（插件js生成的）
+    Arr_classNE_Obj:[],
+    //非空班级对应班级总人数
+    Arr_classCount:[],
+    init:function(option){
+      clearInterval(this.refreshPage);
+      this.$all_Class=option.$all_Class;
+      this.$toClass=option.$toClass;
+      this.$toPeople=option.$toPeople;
+      //查询各班级人数
+      this.request_StudentCountOfClass();
+      //获取此签到的id
+      this.getId();        
+      //创建三维数组，根据年级班级存所有签到人              
+      this.define_Arr_all();     
+      //创建二维数组，存非空班级的签到人       
+      this.define_Arr_classNotEmpty();
+      //获取所有签到人信息   
+      this.requestData();
+      var _this=this;
+      
+      //每隔30秒刷新，以得到新的非空班级
+      this.refreshPage=setInterval(function() {
+        clearInterval(_this.refreshId);
+        if(window.location.href.split('#')[1]!="signCheck_Checkclass?id="+_this.dataId+"")
+        {
+          // clearInterval(_this.refreshPage);
+          // console.log("网页已经跳转!已取消定时器!");
+          return;
+        }
+        //重新赋值
+        _this.kId=0;
+        _this.Arr_all=[];
+        _this.Arr_classNotEmpty=[];
+        _this.Arr_classNE_ofGrade=[];
+        _this.Arr_classNE_ofClass=[];
+        _this.Arr_classNE_Obj=[];
+        _this.Arr_classCount=[];
+        _this.define_Arr_all();
+        _this.define_Arr_classNotEmpty();
+        _this.requestData();
+        console.log("");
+      }, 34000);
+      this.listenHref=setInterval(function(){
+        if(window.location.href.split('#')[1]!="signCheck_Checkclass?id="+_this.dataId+"")
+        {
+          clearInterval(_this.refreshId);
+          clearInterval(_this.refreshPage);
+          clearInterval(_this.listenHref);
+          console.log("网页已经跳转!已取消定时器!");
+          return;
+        }
+      },1000);
+    },
+    //获取此签到的id
+    getId:function(){
+      var dataId=window.location.href.split('?id=')[1];
+      console.log(window.location.href.split('#')[1]);
+      this.dataId=dataId;
+      this.$toClass.attr("href","#signCheck_Checkclass?id="+this.dataId);
+      this.$toPeople.attr("href","#signCheck_Checkpeople?id="+this.dataId);
+      // this.$ktj_breadcrumb.attr("href","#formManage_Checkforum?id="+this.dataId);
+      console.log(this.dataId);
+    },
+    //查询各班级人数
+    request_StudentCountOfClass:function(){
+      this.loading();
+      var _this=this;
+      $.ajax({
+        "url": "https://d.apicloud.com/mcm/api/Banner",
+        "data":{
+          "filter":{
+            "where":{"id":"5a1c304150b66d7402a4580f"},
+            "fields":["Other"],
+          }
+        },
+        "cache": false,
+        "headers": apiHeader,
+        "type": "GET",
+      }).success(function (data, status, header) {
+        console.log(data);
+        _this.StCountOfClass=data[0].Other[0];
+        console.log(_this.StCountOfClass);
+      }).fail(function (header, status, errorThrown) {
+        //fail body
+      });
+    },
+    //获取所有签到人信息   
+    requestData:function(){
+      var _this=this;
+      $.ajax({
+        "url": "https://d.apicloud.com/mcm/api/Activity",
+        "data":{
+          "filter":{
+            "where":{"id":this.dataId},
+            "fields":["SignPeople"],
+            // "include":"actSign",
+            // "includefilter":{
+            //  "MyUser":{"fields":["id","Name","Nickname","Phone","AccountNumber"]}
+            // }
+          }
+        },
+        "cache": false,
+        "headers": apiHeader,
+        "type": "GET",
+      }).success(function (data, status, header) {
+        console.log(data[0]);
+        _this.SignPerson=data[0].SignPeople;
+        console.log(_this.SignPerson);
+        if(_this.SignPerson.length==0){_this.$all_Class.html(" 无签到信息！");_this.loaded();return;}
+        _this.classify_grade();
+        _this.strDOM();
+        _this.loaded();
+      }).fail(function (header, status, errorThrown) {
+        //fail body
+      });
+    },
+    //创建三维数组，根据年级班级存所有签到人              
+    define_Arr_all:function(){
+      for(var i=0;i<8;i++){
+        this.Arr_all[i]=new Array();
+        for(var j=0;j<20;j++){
+          this.Arr_all[i][j]=new Array();
+        }
+      }
+      console.log(this.Arr_all);
+    },
+    //创建二维数组，存非空班级的签到人       
+    define_Arr_classNotEmpty:function(){
+      for(var i=0;i<30;i++){
+        this.Arr_classNotEmpty[i]=new Array();
+      }
+    },
+    //根据年级班级对所有签到人分类 
+    classify_grade:function(){
+      var str_regex=/^\d{8}$/;
+      for (var i = 0; i <this.SignPerson.length; i++) {
+        if((str_regex.test(this.SignPerson[i].accountnumber))&&(this.SignPerson[i].accountnumber.slice(0,2)=="21")){
+          var kgrade=parseInt(this.SignPerson[i].accountnumber.slice(2,4));
+          var kclass=parseInt(this.SignPerson[i].accountnumber.slice(4,6));
+          this.Arr_all[kgrade-14][kclass-0].push(this.SignPerson[i]);}
+        else{
+          this.Arr_all[0][0].push(this.SignPerson[i]);
+        }
+      }
+      console.log(this.Arr_all);
+    },
+    //html页面字符串拼接
+    strDOM:function(){
+      this.loading();
+      var str="";
+      for(var i=1;i<this.Arr_all.length;i=i+1){
+        for(var j=0;j<this.Arr_all[i].length;j++){
+          if(this.Arr_all[i][j].length>0){
+            str+=this.strLink_grade(this.Arr_all[i],i+14);
+            break;
+          }
+        }
+      }
+      this.$all_Class.html(str);
+      this.define_classId();
+      this.loaded();
+    },
+    //每一个非空年级的字符串拼接
+    strLink_grade:function(ret,k){
+      var strBox_grade=new Array();
+      var strBox_class=new Array();
+      var str_class="";
+      strBox_class=[
+          '<li class="certainClass">',
+              '<div id="g'+this.kId+'" class="KJT_gi"></div>',
+              '<a class="signcheckBtn_tagA'+this.kId+'"><button type="button" class="btn btn-default signcheckBtn signcheckBtn'+this.kId+'"></button></a>',
+            '</li>',
+      ];
+      for(var i=0;i<ret.length;i++){
+        if(ret[i].length>0){
+          str_class+=strBox_class.join("");
+          this.Arr_classNotEmpty[this.kId]=ret[i];
+          this.Arr_classNE_ofGrade[this.kId]=k;
+          this.Arr_classNE_ofClass[this.kId]=i;
+          this.kId++;
+          //重新赋值，否则strBox_class不变化
+          strBox_class=[
+          '<li class="certainClass">',
+              '<div id="g'+this.kId+'" class="KJT_gi"></div>',
+              '<a class="signcheckBtn_tagA'+this.kId+'"><button type="button" class="btn btn-default signcheckBtn signcheckBtn'+this.kId+'"></button></a>',
+            '</li>',
+          ];
+        }
+      }
+      strBox_grade=[
+      '<div class="grade">',
+      '<div class="head">20'+k+'级</div>',
+        '<ul class="classTable gradeInfo'+k+' KJT-mt-10">',
+          ''+str_class+'',
+        '</ul>',
+      '</div>',
+      ];
+      return strBox_grade.join("");
+    },
+    //对每一个非空班级gi，新建justgage对象
+    define_classId:function(){
+      var _this=this;
+      console.log(this.kId);
+      var classCount;
+      //根据年级，班级号获取班级总人数
+      for(var i=0;i<this.kId;i++){
+        if(this.Arr_classNE_ofGrade[i]==15){
+          classCount=this.StCountOfClass['15'][this.Arr_classNE_ofClass[i]-1].numb;
+          console.log(classCount);
+        }else if(this.Arr_classNE_ofGrade[i]==16){
+          classCount=this.StCountOfClass['16'][this.Arr_classNE_ofClass[i]-1].numb;
+          console.log(classCount);
+        }else if(this.Arr_classNE_ofGrade[i]==17){
+          classCount=this.StCountOfClass['17'][this.Arr_classNE_ofClass[i]-1].numb;
+          console.log(classCount);
+        }else{
+          classCount=30;
+          }
+        this.Arr_classCount.push(classCount);
+        $(".signcheckBtn"+i+"").text(""+(classCount-this.Arr_classNotEmpty[i].length)+"人未签到");
+        $(".signcheckBtn_tagA"+i+"").attr("href","#signCheck_Check_certainclass?id="+this.dataId+"id="+this.Arr_classNE_ofGrade[i]+"id="+this.Arr_classNE_ofClass[i]+"");
+        var kk = new JustGage({
+          id: "g"+i+"",
+          value: this.Arr_classNotEmpty[i].length,
+          min: 0,
+          max: classCount,
+          title: ""+this.Arr_classNE_ofClass[i]+"班",
+        });
+        //存justgage对象
+        this.Arr_classNE_Obj.push(kk);
+        // eval("var g"+i+"=new Object();");
+        // var kgi="g"+i+"="+kk+";";
+        // eval(kgi);
+        }
+      console.log(this.Arr_classNE_Obj);
+      //仪表盘插件动态刷新
+      this.refreshId=setInterval(function() {
+          _this.request_New_signCount();
+          console.log(3333333333333333);
+      }, 6000);
+    },
+    //获取签到人，得到非空班级【新的】签到人数，再刷新仪表盘插件
+    request_New_signCount:function(){
+      var _this=this;
+      $.ajax({
+        "url": "https://d.apicloud.com/mcm/api/Activity",
+        "data":{
+          "filter":{
+            "where":{"id":this.dataId},
+            "fields":["SignPeople"],
+            // "include":"actSign",
+            // "includefilter":{
+            //  "MyUser":{"fields":["id","Name","Nickname","Phone","AccountNumber"]}
+            // }
+          }
+        },
+        "cache": false,
+        "headers": apiHeader,
+        "type": "GET",
+      }).success(function (data, status, header) {
+        console.log(data[0]);
+        _this.SignPerson_New=data[0].SignPeople;
+        console.log(_this.SignPerson_New);
+        for(var i=0;i<_this.Arr_classNE_Obj.length;i++)
+        {
+          _this.signCount_New(_this.Arr_classNE_ofGrade[i],_this.Arr_classNE_ofClass[i]);
+          $(".signcheckBtn"+i+"").text(""+(_this.Arr_classCount[i]-_this.sCount_new)+"人未签到");
+          _this.Arr_classNE_Obj[i].refresh(_this.sCount_new);
+        }
+      }).fail(function (header, status, errorThrown) {
+        //fail body
+      });
+    },
+    //得到非空班级新签到人数
+    signCount_New:function(gra,cla){
+      var str_regex=/^\d{8}$/;
+      var sCount_new=0;
+      for (var i = 0; i <this.SignPerson_New.length; i++) {
+        if((str_regex.test(this.SignPerson_New[i].accountnumber))&&(this.SignPerson_New[i].accountnumber.slice(0,2)=="21")){
+          var kgrade=parseInt(this.SignPerson_New[i].accountnumber.slice(2,4));
+          var kclass=parseInt(this.SignPerson_New[i].accountnumber.slice(4,6));
+          if(kgrade==gra&&kclass==cla){
+            sCount_new++;
+          }
+        }
+      }
+      this.sCount_new=sCount_new;
+    },
+    
+    //加载中
+    loading:function(){
+      this.layerIndex = layer.load(1, {
+        shade: [0.3,'#000'] //0.1透明度的白色背景
+      });
+    },
+    // 加载完毕
+    loaded:function(){
+      layer.close(this.layerIndex);
+    },
+  };
+
+  return obj;
+
+})(jQuery,this);

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left"></span>
+        </div>
+        <div class="aui-title titlecol">培训考核</div>
+    </header>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">考核对象</span>
+      <span class="aui-iconfont right">张浩哲</span>
+    </div>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">考核时间</span>
+      <span class="right">04月23日</span>
+    </div>
+    <div class="list_frame">
+      <span class="">考核地点</span>
+      <span class="right">长大店</span>
+    </div>
+    <div class="list_frame">
+      <span class="">考核类型</span>
+      <span class="right">旷工</span>
+    </div>
+    <div class="list_frame">
+      <span class="">薪资变动</span>
+      <span class="right">-80元</span>
+    </div>
+    
+    
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+
+    };
+</script>
+</html>

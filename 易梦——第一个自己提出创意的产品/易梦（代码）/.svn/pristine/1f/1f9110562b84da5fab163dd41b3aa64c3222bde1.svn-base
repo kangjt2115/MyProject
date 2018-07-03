@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+      <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-pull-refresh.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <style>
+    	body{
+    		background: #f5f5f5;
+    	}
+    	.bai-entry-p{
+            margin: 1rem auto;
+            /*margin-bottom: 0.4rem;*/
+              width: 99%;
+            background: white;
+            color: #e51c23;
+            
+        }
+    </style>
+</head>
+<body>
+
+	<div class="aui-content  ">
+    <ul class="aui-list aui-list-in aui-margin-t-15">
+        <li class="aui-list-item" onclick="opensiteactive()">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">活动设定</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-list-in aui-margin-t-15">
+       
+        <li class="aui-list-item aui-list-item-middle" onclick="opensiteprivate()">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">隐私设置</div>
+            </div>
+        </li>
+        <li class="aui-list-item" onclick="opensitehelp()">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">帮助与反馈</div>
+            </div>
+        </li>
+    </ul>
+    <ul class="aui-list aui-list-in aui-margin-t-15">
+       
+        <li class="aui-list-item aui-list-item-middle" onclick="opensiteaboutus()">
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">关于我们</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<p><div class="aui-btn aui-btn-block bai-entry-p">退出登录</div></p>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+	function opensitemange(){
+		api.openWin({
+	        name: 'site_mange_header',
+	        url: './site_mange_header.html'
+        });
+	}
+	function opensiteactive(){
+		api.openWin({
+	        name: 'site_active_header',
+	        url: './site_active_header.html'
+        });
+	}
+	function opensiteprivate(){
+		api.openWin({
+	        name: 'site_private_header',
+	        url: './site_private_header.html'
+        });
+	}
+	function opensitehelp(){
+		api.openWin({
+	        name: 'site_help_header',
+	        url: './site_help_header.html'
+        });
+	}
+	function opensiteaboutus(){
+		api.openWin({
+	        name: 'site_aboutus_header',
+	        url: './site_aboutus_header.html'
+        });
+	}
+</script>
+</html>

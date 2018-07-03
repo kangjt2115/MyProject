@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+      <title>title</title>
+      <link rel="stylesheet" type="text/css" href="../css/api.css">
+      <link rel="stylesheet" type="text/css" href="../css/aui.css">
+      <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+      <style type="text/css">
+        
+        .icon1{
+          font-size: 1.35rem;
+        }
+        #footer{
+          border-top: 1px solid #eee;
+          position: fixed;
+        }
+        #footer div.active{ color: #fda340; }
+      </style>
+
+  </head>
+  <body>
+    
+      <footer class="aui-bar aui-bar-tab" id="footer">
+        <div class="aui-bar-tab-item" onclick="randomSwitchBtn(this,0);" tapmode>
+            <i class="iconfont icon1">&#xe6a2;</i>
+            <div class="aui-bar-tab-label">消息</div>
+        </div>
+        <div class="aui-bar-tab-item" onclick="randomSwitchBtn(this,1);" tapmode>
+            <i class="iconfont icon1">&#xe645;</i>
+            <div class="aui-bar-tab-label">通讯录</div>
+        </div>
+        <div class="aui-bar-tab-item active" onclick="randomSwitchBtn(this,2);" tapmode>
+            <i class="iconfont icon1">&#xe60e;</i>
+            <div class="aui-bar-tab-label">排班</div>
+        </div>
+        <div class="aui-bar-tab-item" onclick="randomSwitchBtn(this,3);" tapmode>
+            <i class="iconfont icon1">&#xe614;</i>
+            <div class="aui-bar-tab-label">我的</div>
+        </div>
+      </footer>
+
+  </body>
+  <script type="text/javascript" src="../script/api.js"></script>
+  <script src="../script/iconfont.js"></script>
+  <script type="text/javascript">
+      apiready = function () {
+        var footer = $api.byId('footer');
+        var footerH = $api.offset(footer).h;
+
+        
+        api.openFrame({
+          name:'arrangement',
+          url:'./arrangement.html',
+                
+          bounces:false, 
+          rect: {
+            x: 0,
+            y: 0,
+            w: 'auto',
+            h: 'auto',
+            marginBottom:footerH
+          }
+        }); 
+
+         randomSwitchBtn=function(tag,index_){
+    
+          var aIndex = [{
+                  name:'message',
+                  url:'./message.html',
+              }, {
+                  name:'kjt_telBook_a',
+                  url:'./kjt_telBook_a.html',
+              },  {
+                  name:'arrangement',
+                  url:'./arrangement.html',
+              }, {
+                  name:'mine',
+                  url:'./mine.html',
+              }];
+
+          for (var i = 0; i < aIndex.length; i++) {
+              var obj = aIndex[i];
+              if (i == index_) {
+                  if (obj.url) {
+                      api.openFrame({
+                          name: obj.name,
+                          url: obj.url,
+                          bounces: false,
+                          bgColor: '#f5f5f5',
+                          rect: {
+                              x: 0,
+                              y: 0,
+                              w: 'auto',
+                              h: 'auto',
+                              marginBottom: footerH
+                          }
+                      });
+                  }
+    
+            } else {
+            //其他项
+              if (obj.name) {
+                api.setFrameAttr({
+                    name: obj.name,
+                    hidden: true
+                });
+              }
+            }
+          }
+          if( tag == $api.dom('#footer div.active') )return;
+          var eFootLis = $api.domAll('#footer div');
+             
+          index = 0;
+          for (var i = 0,len = eFootLis.length; i < len; i++) {
+              if( tag == eFootLis[i] ){
+                  index = i;
+                  
+              }else{
+                  $api.removeCls(eFootLis[i], 'active');
+              
+              }
+              
+          }
+          $api.addCls( eFootLis[index], 'active');
+        }
+      }
+  </script>
+  </html>

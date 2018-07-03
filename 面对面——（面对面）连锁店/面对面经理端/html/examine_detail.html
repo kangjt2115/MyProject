@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mss_common.css" />
+</head>
+<body>
+	<header class="aui-bar aui-bar-nav headercol" id="header">
+        <div class="aui-pull-left aui-btn">
+            <span class="aui-iconfont aui-icon-left" id="left" onclick="api.closeWin()"></span>
+        </div>
+        <div class="aui-title titlecol">培训考核</div>
+    </header>
+    <div class="tag"></div>
+    <div class="list_frame">
+      <span class="">申请人</span>
+      <span class="aui-iconfont right">张浩哲</span>
+    </div>
+    <div class="tag">考核要点：</div>
+    <div class="list_frame">
+      <span class="">一、遵纪守法</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="list_frame">
+      <span class="">二、诚实友善</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+    <div class="list_frame">
+      <span class="">三、爱岗敬业</span>
+      <span class="right"><input type="checkbox" /></span>
+    </div>
+
+    <div class="tag">备注：</div>
+    <div class="note"><textarea name="" id="" cols="3" rows="10" style="width:100%;height:100%;"></textarea></div>
+    <div class="tag"></div>
+    <div class="tag"></div>
+    <div class="button">
+ 		考核通过
+    </div>
+    <div class="tag"></div>
+    <div class="button failure">
+ 		考核失败
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      var head=$api.byId("header");
+      $api.fixStatusBar(head);
+
+    };
+</script>
+</html>

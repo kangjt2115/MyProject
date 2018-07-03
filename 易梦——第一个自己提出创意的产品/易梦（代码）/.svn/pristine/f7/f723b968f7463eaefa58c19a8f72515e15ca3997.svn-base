@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>分享</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	<style>
+        html{
+            width: 100%;
+            height: 100%;
+            /*background: #000;
+            opacity: 0.6;*/
+        }
+		body{
+            width: 100%;
+            height: 100%;
+            background:transparent;
+
+        }
+        .bai-add-div1{
+        	height: 12.35rem;
+        	width: 100%;
+        	background:white;
+            position: fixed;
+            bottom: 0;
+        }
+        .bai-add-div2{
+        	height: 1.2rem;
+        	width: 84%;
+        	margin:0 auto;
+        	background:white;
+            padding:0.75rem 0;
+        }
+        .bai-add-div4{
+        	width: 100%;
+            height: 1.2rem;
+        	background:white;
+        	padding:0.75rem 0;
+        }
+        .bai-add-div3{
+        	height: 5.25rem;
+        	width: 84%;
+        	margin:0 auto;
+        	background:white;
+        	border-top:0.07rem solid #DDDDDD;
+        	border-bottom:0.07rem solid #DDDDDD;
+            padding:0.75rem 0;
+        }
+        .bai-add-span{
+            font-family: "微软雅黑  ";
+            display: block;
+        	font-size:0.9rem;
+        	width: 5rem;
+        	margin:0 auto;
+            text-align: center;
+        }
+        .bai-add-span1{
+            font-family: "微软雅黑  ";
+            display: block;
+        	font-size:0.9rem;
+        	width: 5rem;
+            text-align: left;
+        }
+        .bai-add-div3-div{
+        	height: 100%;
+        	width: 25%;
+        	float: left;
+        }
+        .bai-add-div3-div img{
+        	display:block;
+        	height: 2.5rem;
+        	width: 2.5rem;
+        	margin: 0.85rem auto;
+        }
+        .bai-add-div3-div span{
+        	display:block;
+        	width:100%;
+        	text-align:center;
+        	color:#BCBCBC;
+        	font-size:0.65rem;
+        	font-family:"微软雅黑";
+        	margin: 0.5rem auto;
+        }
+	</style>
+</head>
+<body>
+    <div style="width: 100%;height: 100%; background: #000;
+            opacity: 0.6;">
+        <div class="bai-add-div1">
+        	<div class="bai-add-div2">
+        		<span class="bai-add-span1">分享到</span>
+        	</div>
+        	<div class="bai-add-div3">
+        		<div class="bai-add-div3-div">
+        			<img src="../image/baiqqkongjian.png" />
+        			<span>qq空间</span>
+        		</div>
+        		<div class="bai-add-div3-div">
+        			<img src="../image/baiQQ.png" />
+        			<span>qq好友</span>
+        		</div>
+        		<div class="bai-add-div3-div">
+        			<img src="../image/baiweixin2.png" />
+        			<span>微信</span>
+        		</div>
+        		<div class="bai-add-div3-div">
+        			<img src="../image/baiweibo2.png" />
+        			<span>微博</span>
+        		</div>
+        	</div>
+        	<div class="bai-add-div2" onclick="api.closeWin({
+            });">
+        		<span class="bai-add-span">取消</span>
+        	</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    
+</script>
+</html>

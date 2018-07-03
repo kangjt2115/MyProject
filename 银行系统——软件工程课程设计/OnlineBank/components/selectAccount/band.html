@@ -1,0 +1,42 @@
+<style type="text/css">
+	.kjt_kk{
+		margin-top: 40px;
+		width: 600px;
+		height: 50px;
+	}
+	.accountNumber{
+		font-size: 20px;
+		color: #dc143c;
+		float: left;
+	}
+	.kjtbtn{
+		font-size: 14px;
+		color: #fff;
+		background: #6495ed;
+		padding: 4px 12px;
+		float: right;
+	}
+</style>
+<div class="row">
+	<div class="container-fluid" >
+		<ol class="breadcrumb">
+		  <li>账户选择</li>
+		  <li id="kjt_breadcrumb"></li>
+		</ol>
+	</div>
+</div>
+<div class="row">
+	<div class="container-fluid kjt_kk" >
+		<div class="accountNumber"></div>
+		<a href="#selectAccount"><button type="button" class="btn kjtbtn">退 出</button></a>
+	</div>
+</div>
+<script src="components/selectAccount/band.js"></script>
+<script type="text/javascript">
+	new KJT.component.selectAccount_band({
+		//面包屑
+		$kjt_breadcrumb:$("#kjt_breadcrumb"),
+		// 内容
+		$content:$(".accountNumber"),
+	});
+</script>
